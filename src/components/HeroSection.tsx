@@ -1,6 +1,7 @@
 import { ArrowRight, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import heroImage from "@/assets/hero-image.jpg";
 
 export function HeroSection() {
   return (
@@ -70,12 +71,30 @@ export function HeroSection() {
             </Button>
           </motion.div>
 
+          {/* Hero Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="mt-12 relative"
+          >
+            <div className="relative rounded-xl overflow-hidden border border-border/50 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+              <img 
+                src={heroImage} 
+                alt="AI Development - Code and Neural Networks" 
+                className="w-full h-auto object-cover max-h-[300px] md:max-h-[400px]"
+              />
+            </div>
+            <div className="absolute -inset-1 bg-primary/20 rounded-xl blur-xl -z-10" />
+          </motion.div>
+
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="mt-16 grid grid-cols-3 gap-8 border-t border-border pt-8"
+            transition={{ delay: 1, duration: 0.6 }}
+            className="mt-12 grid grid-cols-3 gap-8 border-t border-border pt-8"
           >
             {[
               { value: "50+", label: "Проектов" },
@@ -99,7 +118,7 @@ export function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
+        transition={{ delay: 1.4, duration: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
