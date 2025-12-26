@@ -80,10 +80,11 @@ export function HeroSection() {
           >
             <div className="relative rounded-xl overflow-hidden border border-border/50 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
-              <img 
-                src={heroImage} 
-                alt="AI Development - Code and Neural Networks" 
-                className="w-full h-auto object-cover max-h-[300px] md:max-h-[400px]"
+              <img
+                src={heroImage}
+                alt="AI Development - Code and Neural Networks"
+                loading="lazy"
+                className="w-full h-auto object-contain max-h-[320px] md:max-h-[520px]"
               />
             </div>
             <div className="absolute -inset-1 bg-primary/20 rounded-xl blur-xl -z-10" />
