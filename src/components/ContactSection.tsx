@@ -1,4 +1,4 @@
-import { Send, Mail, MessageCircle } from "lucide-react";
+import { Send, Mail, MessageCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -40,6 +40,12 @@ export function ContactSection() {
                 Email
               </a>
             </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://getchat.online#room/6ep3MmEEoUBpHPffhSH8" target="_blank" rel="noopener noreferrer">
+                <MessageSquare className="w-4 h-4" />
+                text me
+              </a>
+            </Button>
           </div>
 
           {/* Terminal-style contact info */}
@@ -69,6 +75,13 @@ export function ContactSection() {
                 <span className="text-muted-foreground">email:</span>{" "}
                 <a href="mailto:hello@seezam.online" className="text-foreground hover:text-primary transition-colors">
                   hello@seezam.online
+                </a>
+              </p>
+              <p>
+                <span className="text-primary">$</span>{" "}
+                <span className="text-muted-foreground">textme:</span>{" "}
+                <a href="https://getchat.online#room/6ep3MmEEoUBpHPffhSH8" target="_blank" className="text-foreground hover:text-primary transition-colors">
+                  getchat.online
                 </a>
               </p>
               <p>
