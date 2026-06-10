@@ -33,19 +33,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <a
-              href="/#services"
-              className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Услуги
-            </a>
-            <a
-              href="/#contact"
-              className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Контакты
-            </a>
+          <div className="hidden md:flex items-center gap-4">
             <Button variant="terminal" size="sm" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
                 <span className="text-muted-foreground mr-1">$</span>
@@ -79,20 +67,6 @@ export function Header() {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-4 border-t border-border">
-                <a
-                  href="/#services"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Услуги
-                </a>
-                <a
-                  href="/#contact"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Контакты
-                </a>
                 <Button variant="terminal" size="sm" className="w-full" asChild>
                   <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
                     <span className="text-muted-foreground mr-1">$</span>
