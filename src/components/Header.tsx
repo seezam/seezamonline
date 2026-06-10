@@ -1,19 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navLinks = [
-  { href: "#services", label: "Услуги" },
-  { href: "#contact", label: "Контакты" },
-];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,15 +34,18 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={isHomePage ? link.href : `/#${link.href.replace('#', '')}`}
-                className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            <a
+              href="/#services"
+              className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Услуги
+            </a>
+            <a
+              href="/#contact"
+              className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Контакты
+            </a>
             <Button variant="terminal" size="sm" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
                 <span className="text-muted-foreground mr-1">$</span>
@@ -83,16 +79,20 @@ export function Header() {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-4 border-t border-border">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={isHomePage ? link.href : `/#${link.href.replace('#', '')}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                <a
+                  href="/#services"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Услуги
+                </a>
+                <a
+                  href="/#contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Контакты
+                </a>
                 <Button variant="terminal" size="sm" className="w-full" asChild>
                   <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
                     <span className="text-muted-foreground mr-1">$</span>
