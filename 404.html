@@ -5,9 +5,13 @@
     <meta http-equiv="refresh" content="0; url=./" />
     <title>Redirecting...</title>
     <script>
-      // Перенаправление всех 404 на index.html для работы React Router
-      const currentPath = window.location.pathname;
-      if (currentPath !== '/') {
+      // Перенаправление всех 404 и якорей без слэша на главную
+      const hash = window.location.hash;
+      if (hash && !hash.startsWith('#/')) {
+        // Якорь без слэша (#services) — перенаправляем на главную
+        window.location.href = './';
+      } else {
+        // Обычное 404
         window.location.href = './';
       }
     </script>
