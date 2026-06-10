@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -11,6 +12,8 @@ const navLinks = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,17 +34,17 @@ export function Header() {
       <div className="container">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="font-mono font-bold text-lg">
+          <Link to="/" className="font-mono font-bold text-lg">
             <span className="text-gradient">seezam</span>
             <span className="text-muted-foreground">.online</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={isHomePage ? link.href : `/#${link.href.replace('#', '')}`}
                 className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
@@ -83,7 +86,7 @@ export function Header() {
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
-                    href={link.href}
+                    href={isHomePage ? link.href : `/#${link.href.replace('#', '')}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
