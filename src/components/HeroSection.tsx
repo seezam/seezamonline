@@ -58,15 +58,9 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button variant="glow" size="lg" asChild>
-              <a href="#contact">
+              <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
                 Связаться
                 <ArrowRight className="w-4 h-4" />
-              </a>
-            </Button>
-            <Button variant="terminal" size="lg" asChild>
-              <a href="#services">
-                <span className="text-muted-foreground mr-1">$</span>
-                ./services
               </a>
             </Button>
           </motion.div>
