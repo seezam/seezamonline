@@ -1,4 +1,4 @@
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-image.jpg";
@@ -20,19 +20,6 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl mx-auto text-center"
         >
-          {/* Terminal-style badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-8 font-mono text-sm"
-          >
-            <Terminal className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">$</span>
-            <span>AI Developer</span>
-            <span className="w-2 h-4 bg-primary animate-blink" />
-          </motion.div>
-
           {/* Main heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono font-bold mb-6 tracking-tight">
             <span className="text-gradient">seezam</span>
