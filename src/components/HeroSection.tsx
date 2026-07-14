@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-image.jpg";
 
@@ -20,11 +18,11 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl mx-auto text-center"
         >
-          {/* Main heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono font-bold mb-6 tracking-tight">
+          {/* Logo */}
+          <div className="mb-6">
             <span className="text-gradient">seezam</span>
             <span className="text-muted-foreground">.online</span>
-          </h1>
+          </div>
 
           {/* Subheading */}
           <motion.p
@@ -36,21 +34,6 @@ export function HeroSection() {
             Разработка Telegram-ботов, мини-приложений, 
             веб-сервисов и AI-автоматизаций под ключ
           </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Button variant="glow" size="lg" asChild>
-              <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Связаться
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </Button>
-          </motion.div>
 
           {/* Hero Image */}
           <motion.div
@@ -69,29 +52,6 @@ export function HeroSection() {
               />
             </div>
             <div className="absolute -inset-1 bg-primary/20 rounded-xl blur-xl -z-10" />
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="mt-12 grid grid-cols-3 gap-8 border-t border-border pt-8"
-          >
-            {[
-              { value: "50+", label: "Проектов" },
-              { value: "3+", label: "Года опыта" },
-              { value: "24/7", label: "Поддержка" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-2xl md:text-3xl font-mono font-bold text-primary glow-text">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
           </motion.div>
         </motion.div>
       </div>
