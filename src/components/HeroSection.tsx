@@ -18,11 +18,11 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl mx-auto text-center"
         >
-          {/* Logo */}
-          <div className="mb-6">
+          {/* Main heading */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono font-bold mb-6 tracking-tight">
             <span className="text-gradient">seezam</span>
             <span className="text-muted-foreground">.online</span>
-          </div>
+          </h1>
 
           {/* Subheading */}
           <motion.p
