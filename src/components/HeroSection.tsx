@@ -29,10 +29,11 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Разработка Telegram-ботов, мини-приложений, 
-            веб-сервисов и AI-автоматизаций под ключ
+            Привет! Я Алекс, разработчик.<br />
+            Создаю Telegram-ботов, мини-приложения, веб-сервисы и AI-автоматизации.<br />
+            Реализую решения «под ключ» — от идеи и прототипа до готового продукта, который решает реальные задачи бизнеса и пользователей.
           </motion.p>
 
           {/* Hero Image */}
