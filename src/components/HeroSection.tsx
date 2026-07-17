@@ -31,7 +31,7 @@ export function HeroSection() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Привет! Я Алекс, разработчик.<br />
+            Привет! Я Алекс  и я разработчик.<br />
             Создаю Telegram-ботов, мини-приложения, веб-сервисы и AI-автоматизации.<br />
             Реализую решения «под ключ» — от идеи и прототипа до готового продукта, который решает реальные задачи бизнеса и пользователей.
           </motion.p>
