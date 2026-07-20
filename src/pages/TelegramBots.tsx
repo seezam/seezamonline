@@ -48,7 +48,7 @@ export default function TelegramBots() {
                 <Bot className="w-20 h-20 text-cyan-400" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-mono font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-sans font-bold mb-6">
               Разработка <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Telegram-ботов</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
@@ -90,7 +90,7 @@ export default function TelegramBots() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-mono font-semibold text-2xl mb-4">
+                  <h3 className="font-sans font-semibold text-2xl mb-4">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
@@ -107,7 +107,7 @@ export default function TelegramBots() {
       <section id="contact" className="py-20 relative z-10">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-mono font-bold mb-6">
+            <h2 className="text-3xl font-sans font-bold mb-6">
               Готовы начать?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">

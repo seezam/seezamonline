@@ -19,7 +19,7 @@ export function ContactSection() {
           <p className="font-mono text-primary text-sm mb-3 tracking-widest uppercase">
             // Контакты
           </p>
-          <h2 className="text-3xl md:text-4xl font-mono font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-sans font-bold mb-4">
             Давайте работать вместе
           </h2>
           <p className="text-muted-foreground mb-10 leading-relaxed">

@@ -43,7 +43,7 @@ export default function AIAutomation() {
                 <Cpu className="w-20 h-20 text-primary" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-mono font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-sans font-bold mb-6">
               <span className="text-gradient">AI Автоматизации</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
@@ -85,7 +85,7 @@ export default function AIAutomation() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-mono font-semibold text-2xl mb-4">
+                  <h3 className="font-sans font-semibold text-2xl mb-4">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
@@ -102,7 +102,7 @@ export default function AIAutomation() {
       <section id="contact" className="py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-mono font-bold mb-6">
+            <h2 className="text-3xl font-sans font-bold mb-6">
               Хотите внедрить ИИ?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">

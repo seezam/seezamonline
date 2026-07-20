@@ -19,7 +19,7 @@ export function HeroSection() {
           className="max-w-3xl mx-auto text-center"
         >
           {/* Main heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono font-bold mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold mb-6 tracking-tight">
             <span className="text-gradient">seezam</span>
             <span className="text-muted-foreground">.online</span>
           </h1>
