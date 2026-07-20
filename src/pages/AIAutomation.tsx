@@ -1,9 +1,13 @@
 import { Cpu, Brain, Zap, Workflow, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function AIAutomation() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const features = [
     {
       icon: Brain,
@@ -50,18 +54,6 @@ export default function AIAutomation() {
               Интеграция нейросетей и LLM в бизнес-процессы — автоматизация рутинных задач с помощью ИИ.
               Превратите искусственный интеллект в реальный инструмент роста вашего бизнеса.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                  Написать в Telegram
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/">
-                  ← На главную
-                </Link>
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>

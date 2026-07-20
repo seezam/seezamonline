@@ -1,9 +1,13 @@
 import { Globe, Code, Zap, Smartphone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function WebApps() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const features = [
     {
       icon: Code,
@@ -57,18 +61,6 @@ export default function WebApps() {
               Современные SPA и PWA на React, Vue, Next.js — быстрые, масштабируемые и удобные.
               От лендингов до сложных платформ — создаю решения, которые растут вместе с вашим бизнесом.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                  Написать в Telegram
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/">
-                  ← На главную
-                </Link>
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>

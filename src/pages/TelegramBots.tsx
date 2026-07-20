@@ -1,9 +1,13 @@
 import { Bot, MessageSquare, Zap, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function TelegramBots() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const features = [
     {
       icon: MessageSquare,
@@ -55,18 +59,6 @@ export default function TelegramBots() {
               Умные боты для автоматизации бизнеса, поддержки клиентов и увеличения продаж 24/7.
               От простых команд до сложных многофункциональных систем — создаю решения, которые работают на вас.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                  Написать в Telegram
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/">
-                  ← На главную
-                </Link>
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
