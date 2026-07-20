@@ -1,13 +1,8 @@
 import { Cloud, Layers, Zap, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 export default function CloudHosting() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const features = [
     {
       icon: Layers,
@@ -36,10 +31,7 @@ export default function CloudHosting() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="max-w-3xl mx-auto text-center"
           >
             <div className="flex justify-center mb-8">
@@ -54,7 +46,7 @@ export default function CloudHosting() {
               Масштабируемая инфраструктура для проектов любого размера — от стартапа до enterprise.
               Современная архитектура, которая растёт вместе с вашим бизнесом.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

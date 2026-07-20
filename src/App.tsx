@@ -2,7 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import TelegramBots from "./pages/TelegramBots";
@@ -20,19 +21,31 @@ const App = () => (
       <Toaster />
       <Sonner />
       <HashRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/telegram-bots" element={<TelegramBots />} />
-          <Route path="/mini-apps" element={<MiniApps />} />
-          <Route path="/web-apps" element={<WebApps />} />
-          <Route path="/vps-hosting" element={<VPSHosting />} />
-          <Route path="/cloud-hosting" element={<CloudHosting />} />
-          <Route path="/ai-automation" element={<AIAutomation />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <RouterContent />
       </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
+
+function RouterContent() {
+  const location = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (
+    <Routes key={location.pathname}>
+      <Route path="/" element={<Index />} />
+      <Route path="/telegram-bots" element={<TelegramBots />} />
+      <Route path="/mini-apps" element={<MiniApps />} />
+      <Route path="/web-apps" element={<WebApps />} />
+      <Route path="/vps-hosting" element={<VPSHosting />} />
+      <Route path="/cloud-hosting" element={<CloudHosting />} />
+      <Route path="/ai-automation" element={<AIAutomation />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
 
 export default App;

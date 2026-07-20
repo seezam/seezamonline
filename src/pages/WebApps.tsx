@@ -1,13 +1,8 @@
 import { Globe, Code, Zap, Smartphone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 export default function WebApps() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const features = [
     {
       icon: Code,
@@ -43,10 +38,7 @@ export default function WebApps() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden z-10">
         <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="max-w-3xl mx-auto text-center"
           >
             <div className="flex justify-center mb-8">
@@ -61,7 +53,7 @@ export default function WebApps() {
               Современные SPA и PWA на React, Vue, Next.js — быстрые, масштабируемые и удобные.
               От лендингов до сложных платформ — создаю решения, которые растут вместе с вашим бизнесом.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
