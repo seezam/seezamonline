@@ -2,8 +2,8 @@ import { Bot, MessageSquare, Zap, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const TELEGRAM_IMG = "https://images.unsplash.com/photo-1637592156979-95f44c286423?w=400&h=400&fit=crop&auto=format";
-const ROBOT_IMG = "https://images.unsplash.com/photo-1625314887424-9f190599bd56?w=400&h=400&fit=crop&auto=format";
+const TELEGRAM_IMG = "/assets/telegram-circle.jpg";
+const ROBOT_IMG = "/assets/robot-circle.jpg";
 
 export default function TelegramBots() {
   const features = [
@@ -67,10 +67,6 @@ export default function TelegramBots() {
                       src={TELEGRAM_IMG}
                       alt="Telegram"
                       className="w-full h-full object-cover"
-                      crossOrigin="anonymous"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect fill='%232AABEE' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E";
-                      }}
                     />
                     <div className="absolute inset-0 bg-cyan-500/10 mix-blend-multiply" />
                   </div>
@@ -92,10 +88,6 @@ export default function TelegramBots() {
                       src={ROBOT_IMG}
                       alt="Автоматизация"
                       className="w-full h-full object-cover"
-                      crossOrigin="anonymous"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect fill='%238B5CF6' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='48'%3E%F0%9F%90%A6%3C/text%3E%3C/svg%3E";
-                      }}
                     />
                     <div className="absolute inset-0 bg-violet-900/20 mix-blend-multiply" />
                   </div>
