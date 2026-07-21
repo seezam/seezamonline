@@ -2,9 +2,6 @@ import { Bot, MessageSquare, Zap, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const TELEGRAM_IMG = "/assets/telegram-circle.jpg";
-const ROBOT_IMG = "/assets/robot-circle.jpg";
-
 export default function TelegramBots() {
   const features = [
     {
@@ -53,45 +50,18 @@ export default function TelegramBots() {
               Умные боты для автоматизации бизнеса, поддержки клиентов и увеличения продаж 24/7. От простых команд до сложных многофункциональных систем — создаём решения, которые работают на вас.
             </p>
 
-            {/* Thematic circles */}
-            <div className="flex flex-col items-center justify-center gap-8 mb-14 md:flex-row md:gap-10 md:mb-14">
-              {/* Telegram circle */}
-              <div className="flex flex-col items-center gap-3">
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-full bg-cyan-500/25 blur-2xl scale-125" />
-                  <div
-                    className="relative rounded-full overflow-hidden border-[3px] border-cyan-500/50 shadow-[0_0_48px_rgba(34,211,238,0.3)]"
-                    style={{ width: 160, height: 160 }}
-                  >
-                    <img
-                      src={TELEGRAM_IMG}
-                      alt="Telegram"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-cyan-500/10 mix-blend-multiply" />
-                  </div>
-                </div>
-              </div>
-
-              {/* divider dot */}
-              <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground/20 md:hidden" />
-
-              {/* AI / automation circle */}
-              <div className="flex flex-col items-center gap-3">
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-full bg-violet-500/20 blur-2xl scale-125" />
-                  <div
-                    className="relative rounded-full overflow-hidden border-[3px] border-violet-500/40 shadow-[0_0_48px_rgba(139,92,246,0.25)]"
-                    style={{ width: 160, height: 160 }}
-                  >
-                    <img
-                      src={ROBOT_IMG}
-                      alt="Автоматизация"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-violet-900/20 mix-blend-multiply" />
-                  </div>
-                </div>
+            {/* Video */}
+            <div className="flex justify-center mb-14">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-2xl bg-cyan-500/20 blur-3xl scale-110" />
+                <video
+                  src="/assets/tg-bot.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="relative rounded-2xl w-full max-w-[400px] md:max-w-[500px] object-cover border-2 border-cyan-500/30 shadow-[0_0_48px_rgba(34,211,238,0.25)]"
+                />
               </div>
             </div>
           </div>
