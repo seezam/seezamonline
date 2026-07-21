@@ -41,18 +41,28 @@ export default function MiniApps() {
           <div
             className="max-w-3xl mx-auto text-center"
           >
-            <div className="flex justify-center mb-8">
-              <div className="p-6 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl backdrop-blur-sm border border-purple-500/20">
-                <Smartphone className="w-20 h-20 text-purple-400" />
+            <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
+              Telegram <span className="text-purple-400">Mini Apps</span>
+            </h1>
+
+            <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
+              Полнофункциональные веб-приложения прямо внутри Telegram — без установки дополнительных программ. От интернет-магазинов до игровых платформ — всё работает в одном месте.
+            </p>
+
+            {/* Video */}
+            <div className="flex justify-center mb-14">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-2xl bg-purple-500/20 blur-3xl scale-110" />
+                <video
+                  src="/assets/tg-miniapp.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="relative rounded-2xl w-full max-w-[400px] md:max-w-[500px] object-cover border-2 border-purple-500/30 shadow-[0_0_48px_rgba(168,85,247,0.25)]"
+                />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-sans font-bold mb-6">
-              Telegram <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Mini Apps</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-              Полнофункциональные веб-приложения прямо внутри Telegram — без установки дополнительных программ.
-              От интернет-магазинов до игровых платформ — всё работает в одном месте.
-            </p>
           </div>
         </div>
       </section>
