@@ -1,4 +1,4 @@
-import { Send, Mail, MessageCircle, MessageSquare } from "lucide-react";
+import { Send, Mail, MessageCircle, MessageSquare, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -67,6 +67,13 @@ export function ContactSection() {
                 <span className="text-muted-foreground">telegram:</span>{" "}
                 <a href="https://t.me/seezam" className="text-foreground hover:text-primary transition-colors">
                   @seezam
+                </a>
+              </p>
+              <p>
+                <span className="text-primary">$</span>{" "}
+                <span className="text-muted-foreground">x:</span>{" "}
+                <a href="https://x.com/SeeZam" target="_blank" className="text-foreground hover:text-primary transition-colors">
+                  @SeeZam
                 </a>
               </p>
               <p>
