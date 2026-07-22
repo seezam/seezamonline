@@ -6,23 +6,23 @@ export default function VPSHosting() {
   const features = [
     {
       icon: Shield,
-      title: "Защита и безопасность",
-      description: "DDoS-защита, брандмауэры, регулярные бэкапы — ваши данные под надёжной охраной. Автоматическое резервное копирование и восстановление в случае сбоев."
+      title: "Protection & Security",
+      description: "DDoS protection, firewalls, regular backups — your data is under reliable guard. Automatic backup and recovery in case of failures."
     },
     {
       icon: Zap,
-      title: "Высокая производительность",
-      description: "NVMe SSD, мощные процессоры и до 64GB RAM для любых задач. Выделенные ресурсы без соседей на одном железе — стабильная скорость 24/7."
+      title: "High Performance",
+      description: "NVMe SSD, powerful processors and up to 64GB RAM for any tasks. Dedicated resources without neighbors on the same hardware — stable speed 24/7."
     },
     {
       icon: Globe,
-      title: "Глобальная доступность",
-      description: "Дата-центры в Европе и Азии — выбирайте локацию ближе к вашим клиентам. Низкие пинги и высокая доступность по всему миру."
+      title: "Global Availability",
+      description: "Data centers in Europe and Asia — choose a location closer to your customers. Low pings and high availability worldwide."
     },
     {
       icon: Server,
-      title: "Масштабируемость",
-      description: "Мгновенное увеличение ресурсов без простоя — от 1 до 100+ серверов. Адаптируйтесь под нагрузку без переездов и простоев."
+      title: "Scalability",
+      description: "Instant resource increase without downtime — from 1 to 100+ servers. Adapt to load without moving and downtime."
     }
   ];
 
@@ -46,12 +46,13 @@ export default function VPSHosting() {
                 <Server className="w-20 h-20 text-orange-400" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-sans font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">VPS Хостинг</span>
+            <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">VPS Hosting</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-              Надёжные виртуальные серверы с быстрым SSD и круглосуточной поддержкой.
-              Разверните свой проект за часы, а не дни. Полная контроль и гибкость под ваши задачи.
+
+            <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
+              Reliable virtual servers with fast SSD and round-the-clock support.
+              Deploy your project in hours, not days. Full control and flexibility for your tasks.
             </p>
           </div>
         </div>
@@ -94,15 +95,15 @@ export default function VPSHosting() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-sans font-bold mb-6">
-              Нужен сервер?
+              Need a Server?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              Помогу выбрать конфигурацию под ваши задачи и бюджет.
-              Консультация — бесплатно. Подбор — за 30 минут.
+              I'll help you choose a configuration for your tasks and budget.
+              Consultation — free. Selection — within 30 minutes.
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Консультация
+                Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>

@@ -6,18 +6,18 @@ export default function TelegramBots() {
   const features = [
     {
       icon: MessageSquare,
-      title: "Автоматическая поддержка",
-      description: "Мгновенные ответы на вопросы клиентов, обработка заявок и записей. Ваш бот работает 24/7, не уставая и не делая ошибок. Клиенты получают ответы за секунды, а не часы ожидания."
+      title: "Automated Support",
+      description: "Instant responses to customer inquiries, order and appointment processing. Your bot works 24/7 without getting tired or making mistakes. Customers get answers in seconds, not hours of waiting."
     },
     {
       icon: Zap,
-      title: "Интеграции",
-      description: "Подключение к CRM, платёжным системам, базам данных и API. Бот становится частью вашей экосистемы — синхронизирует заказы, клиентов, уведомления и отчёты в реальном времени."
+      title: "Integrations",
+      description: "Connect to CRM, payment systems, databases and APIs. The bot becomes part of your ecosystem — synchronizing orders, clients, notifications and reports in real time."
     },
     {
       icon: Shield,
-      title: "Безопасность",
-      description: "Защита данных, надёжная аутентификация и контроль доступа; настройка ролей пользователей, фильтры контента и защита от спама. Ваши данные и репутация под надёжной охраной."
+      title: "Security",
+      description: "Data protection, reliable authentication and access control; user role configuration, content filtering and spam protection. Your data and reputation are under reliable guard."
     }
   ];
 
@@ -42,12 +42,12 @@ export default function TelegramBots() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              Разработка{" "}
-              <span className="text-cyan-400">Telegram-ботов</span>
+              Development of{" "}
+              <span className="text-cyan-400">Telegram Bots</span>
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Умные боты для автоматизации бизнеса, поддержки клиентов и увеличения продаж 24/7. От простых команд до сложных многофункциональных систем — создаём решения, которые работают на вас.
+              Smart bots for business automation, customer support and sales growth 24/7. From simple commands to complex multi-functional systems — we create solutions that work for you.
             </p>
 
             {/* Video */}
@@ -98,13 +98,13 @@ export default function TelegramBots() {
       <section className="py-20 relative z-10">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-muted-foreground text-base mb-2">Готовы начать?</p>
+            <p className="text-muted-foreground text-base mb-2">Ready to start?</p>
             <p className="text-muted-foreground text-sm mb-6">
-              Опишите нам проект и задачи вашего бота. Напишите нам — ответим в течение нескольких часов.
+              Describe your project and bot tasks. Write to us — we'll respond within a few hours.
             </p>
             <Button size="lg" className="rounded-full bg-cyan-500 hover:bg-cyan-600 shadow-[0_0_30px_rgba(34,211,238,0.35)]" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Связаться в Telegram
+                Contact on Telegram
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>

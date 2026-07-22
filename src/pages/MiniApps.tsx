@@ -6,23 +6,23 @@ export default function MiniApps() {
   const features = [
     {
       icon: Layers,
-      title: "Любая функциональность",
-      description: "E-commerce, бронирование, игры, дашборды — всё, что работает в браузере, работает в Telegram. Создавайте полноценные приложения без ограничений платформы."
+      title: "Any Functionality",
+      description: "E-commerce, booking, games, dashboards — everything that works in a browser works in Telegram. Create full-featured applications without platform restrictions."
     },
     {
       icon: Zap,
-      title: "Мгновенный запуск",
-      description: "Пользователи открывают приложение в один клик, без регистрации и скачивания. Никаких App Store, Google Play или долгих установок — сразу к делу."
+      title: "Instant Launch",
+      description: "Users open the app in one click, without registration or download. No App Store, Google Play or long installations — straight to business."
     },
     {
       icon: Globe,
-      title: "Кроссплатформенность",
-      description: "Одно приложение работает на iOS, Android и Desktop — везде где есть Telegram. Больше не нужно поддерживать три разные коды базы."
+      title: "Cross-platform",
+      description: "One app works on iOS, Android and Desktop — everywhere where Telegram exists. No need to maintain three separate codebases anymore."
     },
     {
       icon: Smartphone,
-      title: "Нативный UX",
-      description: "Интеграция с интерфейсом Telegram, темизация и нативные жесты. Приложение ощущается как часть мессенджера, а не сторонний сайт."
+      title: "Native UX",
+      description: "Integration with Telegram interface, theming and native gestures. The app feels like part of the messenger, not a third-party website."
     }
   ];
 
@@ -46,7 +46,7 @@ export default function MiniApps() {
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Полнофункциональные веб-приложения прямо внутри Telegram — без установки дополнительных программ. От интернет-магазинов до игровых платформ — всё работает в одном месте.
+              Full-featured web applications right inside Telegram — without installing additional software. From online stores to gaming platforms — everything works in one place.
             </p>
 
             {/* Video */}
@@ -104,15 +104,15 @@ export default function MiniApps() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-sans font-bold mb-6">
-              Идея для Mini App?
+              Idea for a Mini App?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              Расскажи о проекте — обсудим техническую реализацию и сроки.
-              Помогу превратить концепт в работающее приложение.
+              Tell me about your project — we'll discuss technical implementation and timelines.
+              I'll help turn your concept into a working application.
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Обсудить проект
+                Discuss Project
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>

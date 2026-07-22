@@ -6,23 +6,23 @@ export default function WebApps() {
   const features = [
     {
       icon: Code,
-      title: "Современный стек",
-      description: "React 18, TypeScript, Next.js, TailwindCSS — лучшие инструменты для качественного продукта. Чистый код, модульная архитектура и лёгкая поддержка в будущем."
+      title: "Modern Stack",
+      description: "React 18, TypeScript, Next.js, TailwindCSS — the best tools for quality products. Clean code, modular architecture and easy maintenance in the future."
     },
     {
       icon: Zap,
-      title: "Высокая производительность",
-      description: "Оптимизация загрузки, lazy loading, код-сплиттинг — ваш сайт будет летать. Google PageSpeed в зеленой зоне и довольные пользователи."
+      title: "High Performance",
+      description: "Loading optimization, lazy loading, code splitting — your site will fly. Google PageSpeed in the green zone and happy users."
     },
     {
       icon: Smartphone,
-      title: "Адаптивный дизайн",
-      description: "Идеальное отображение на всех устройствах — от мобильных до десктопов. Mobile-first подход и тестирование на реальных устройствах."
+      title: "Responsive Design",
+      description: "Perfect display on all devices — from mobile to desktop. Mobile-first approach and testing on real devices."
     },
     {
       icon: Globe,
-      title: "SEO-оптимизация",
-      description: "SSR и SSG для лучшего ранжирования в поисковых системах. Правильная структура, мета-теги и микроразметка для максимального охвата."
+      title: "SEO Optimization",
+      description: "SSR and SSG for better search engine ranking. Proper structure, meta tags and microdata for maximum reach."
     }
   ];
 
@@ -46,12 +46,13 @@ export default function WebApps() {
                 <Globe className="w-20 h-20 text-emerald-400" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-sans font-bold mb-6">
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Веб-приложения</span>
+            <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
+              <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Web Applications</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-              Современные SPA и PWA на React, Vue, Next.js — быстрые, масштабируемые и удобные.
-              От лендингов до сложных платформ — создаю решения, которые растут вместе с вашим бизнесом.
+
+            <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
+              Modern SPA and PWA on React, Vue, Next.js — fast, scalable and user-friendly.
+              From landing pages to complex platforms — I create solutions that grow with your business.
             </p>
           </div>
         </div>
@@ -94,15 +95,15 @@ export default function WebApps() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-sans font-bold mb-6">
-              Нужно веб-приложение?
+              Need a Web Application?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              От лендинга до сложной платформы — сделаю качественно и в срок.
-              Обсудим вашу задачу и найдём оптимальное решение.
+              From landing page to complex platform — I'll do it quality and on time.
+              We'll discuss your task and find the optimal solution.
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Обсудить проект
+                Discuss Project
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>

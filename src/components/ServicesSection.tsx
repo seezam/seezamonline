@@ -5,43 +5,43 @@ import { Link } from "react-router-dom";
 const services = [
   {
     icon: Bot,
-    title: "Telegram Боты",
-    description: "Умные боты для автоматизации бизнеса и взаимодействия с клиентами",
+    title: "Telegram Bots",
+    description: "Smart bots for business automation and customer engagement",
     tag: "bot",
     path: "/telegram-bots"
   },
   {
     icon: Smartphone,
     title: "Telegram Mini Apps",
-    description: "Полнофункциональные приложения внутри Telegram",
+    description: "Full-featured applications inside Telegram",
     tag: "mini-app",
     path: "/mini-apps"
   },
   {
     icon: Globe,
-    title: "Веб-приложения",
-    description: "Современные SPA и PWA на React, Vue, Next.js",
+    title: "Web Applications",
+    description: "Modern SPA and PWA on React, Vue, Next.js",
     tag: "web",
     path: "/web-apps"
   },
   {
     icon: Server,
-    title: "VPS Хостинг",
-    description: "Надёжные виртуальные серверы с быстрым SSD",
+    title: "VPS Hosting",
+    description: "Reliable virtual servers with fast SSD",
     tag: "vps",
     path: "/vps-hosting"
   },
   {
     icon: Cloud,
-    title: "Облачный хостинг",
-    description: "Масштабируемая инфраструктура для ваших проектов",
+    title: "Cloud Hosting",
+    description: "Scalable infrastructure for your projects",
     tag: "cloud",
     path: "/cloud-hosting"
   },
   {
     icon: Cpu,
-    title: "AI Автоматизации",
-    description: "Интеграция нейросетей и LLM в ваши процессы",
+    title: "AI Automation",
+    description: "Neural networks and LLM integration into your processes",
     tag: "ai",
     path: "/ai-automation"
   },
@@ -68,13 +68,13 @@ export function ServicesSection() {
       <div className="container">
         <div className="text-center mb-16">
           <p className="font-mono text-primary text-sm mb-3 tracking-widest uppercase">
-            // Услуги
+            // Services
           </p>
           <h2 className="text-3xl md:text-4xl font-sans font-bold mb-4">
-            Что я делаю
+            What I Do
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
-            Полный цикл разработки — от идеи до продакшена
+            Full development cycle — from idea to production
           </p>
         </div>
 

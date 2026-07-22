@@ -6,23 +6,23 @@ export default function CloudHosting() {
   const features = [
     {
       icon: Layers,
-      title: "Гибкая архитектура",
-      description: "Микросервисы, контейнеризация (Docker, Kubernetes), serverless — подберу оптимальное решение для вашего проекта. Готово к росту и изменениям."
+      title: "Flexible Architecture",
+      description: "Microservices, containerization (Docker, Kubernetes), serverless — I'll find the optimal solution for your project. Ready for growth and changes."
     },
     {
       icon: Zap,
-      title: "Автоматическое масштабирование",
-      description: "Ресурсы увеличиваются и уменьшаются автоматически в зависимости от нагрузки. Пики трафика больше не проблема — всё работает плавно."
+      title: "Auto-scaling",
+      description: "Resources increase and decrease automatically based on load. Traffic spikes are no longer a problem — everything works smoothly."
     },
     {
       icon: Shield,
-      title: "Отказоустойчивость",
-      description: "Резервирование на уровне серверов, сетей и дата-центров — uptime 99.9%. Ваши сервисы доступны всегда, даже при сбоях оборудования."
+      title: "Fault Tolerance",
+      description: "Redundancy at the server, network and data center level — 99.9% uptime. Your services are always available, even during hardware failures."
     },
     {
       icon: Cloud,
       title: "Pay-as-you-go",
-      description: "Оплата только за использованные ресурсы — экономия до 40% по сравнению с фиксированными тарифами. Никаких переплат за простой мощности."
+      description: "Pay only for used resources — save up to 40% compared to fixed tariffs. No overpayments for idle capacity."
     }
   ];
 
@@ -39,12 +39,13 @@ export default function CloudHosting() {
                 <Cloud className="w-20 h-20 text-primary" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-sans font-bold mb-6">
-              <span className="text-gradient">Облачный хостинг</span>
+            <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
+              <span className="text-gradient">Cloud Hosting</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-              Масштабируемая инфраструктура для проектов любого размера — от стартапа до enterprise.
-              Современная архитектура, которая растёт вместе с вашим бизнесом.
+
+            <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
+              Scalable infrastructure for projects of any size — from startup to enterprise.
+              Modern architecture that grows with your business.
             </p>
           </div>
         </div>
@@ -87,15 +88,15 @@ export default function CloudHosting() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-sans font-bold mb-6">
-              Готовы масштабироваться?
+              Ready to Scale?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              Построю облачную инфраструктуру под ваши задачи.
-              Аудит текущей архитектуры — бесплатно.
+              I'll build cloud infrastructure for your tasks.
+              Audit of current architecture — free.
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Обсудить проект
+                Discuss Project
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>

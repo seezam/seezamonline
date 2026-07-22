@@ -17,14 +17,14 @@ export function ContactSection() {
           className="max-w-2xl mx-auto text-center"
         >
           <p className="font-mono text-primary text-sm mb-3 tracking-widest uppercase">
-            // Контакты
+            // Contact
           </p>
           <h2 className="text-3xl md:text-4xl font-sans font-bold mb-4">
-            Давайте работать вместе
+            Let's Work Together
           </h2>
           <p className="text-muted-foreground mb-10 leading-relaxed">
-            Есть идея или проект? Напишите мне, и мы обсудим детали. 
-            Обычно отвечаю в течение нескольких часов.
+            Have an idea or project? Write to me and let's discuss the details. 
+            I usually respond within a few hours.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

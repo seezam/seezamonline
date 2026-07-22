@@ -18,8 +18,7 @@ export function Footer() {
           </div>
           
           <p className="text-muted-foreground text-sm font-mono">
-            © {currentYear} • Crafted with{" "}
-            <span className="text-primary">{"<code/>"}</span>
+            © {currentYear} • Built with passion and clean code
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
