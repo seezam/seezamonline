@@ -18,7 +18,7 @@ export function Footer() {
           </div>
           
           <p className="text-muted-foreground text-sm font-mono">
-            © {currentYear} • Built with passion and clean code
+            © {currentYear} • Built with intelligence and clean architecture
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground">

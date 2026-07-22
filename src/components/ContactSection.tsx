@@ -23,8 +23,7 @@ export function ContactSection() {
             Let's Work Together
           </h2>
           <p className="text-muted-foreground mb-10 leading-relaxed">
-            Have an idea or project? Write to me and let's discuss the details. 
-            I usually respond within a few hours.
+            Have a project or an idea? Let's discuss how we can bring it to life efficiently. I usually respond within a few hours.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -87,12 +86,14 @@ export function ContactSection() {
               <p>
                 <span className="text-primary">$</span>{" "}
                 <span className="text-muted-foreground">website:</span>{" "}
-                <span className="text-foreground">seezam.online</span>
+                <a href="https://seezam.online" target="_blank" className="text-foreground hover:text-primary transition-colors">
+                  seezam.online
+                </a>
               </p>
               <p className="pt-2">
                 <span className="text-primary">$</span>{" "}
                 <span className="text-green-400">echo</span>{" "}
-                <span className="text-foreground">"Ready to build something amazing?"</span>
+                <span className="text-foreground">"Ready to ship your next project?"</span>
                 <span className="w-2 h-4 bg-primary animate-blink inline-block ml-1" />
               </p>
             </div>

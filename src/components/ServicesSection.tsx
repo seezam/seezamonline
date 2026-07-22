@@ -2,11 +2,11 @@ import { Bot, Globe, Server, Cloud, Sparkles, Cpu, Smartphone, Layout, Layers } 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const services = [
+  const services = [
   {
     icon: Bot,
     title: "Telegram Bots",
-    description: "Smart bots for business automation and customer engagement",
+    description: "Smart automation for customer engagement and business processes inside Telegram",
     tag: "bot",
     path: "/telegram-bots"
   },
@@ -20,7 +20,7 @@ const services = [
   {
     icon: Globe,
     title: "Web Applications",
-    description: "Modern SPA and PWA on React, Vue, Next.js",
+    description: "Fast, responsive SPAs and PWAs (React/Next.js) built for performance and scale",
     tag: "web",
     path: "/web-apps"
   },
@@ -41,7 +41,7 @@ const services = [
   {
     icon: Cpu,
     title: "AI Automation",
-    description: "Neural networks and LLM integration into your processes",
+    description: "Connecting LLMs and neural networks into your workflow. Make your business smarter.",
     tag: "ai",
     path: "/ai-automation"
   },
@@ -74,7 +74,7 @@ export function ServicesSection() {
             What I Do
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
-            Full development cycle — from idea to production
+            Full-cycle development powered by AI efficiency
           </p>
         </div>
 

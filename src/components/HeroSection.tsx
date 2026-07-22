@@ -19,20 +19,22 @@ export function HeroSection() {
           className="max-w-4xl mx-auto text-center"
         >
           {/* Main heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-semibold mb-4 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-medium mb-4 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
             Hello!
           </h1>
 
-          {/* Name with full-width line */}
-          <div className="relative my-8">
-            <div className="absolute left-0 right-0 bottom-0 h-[1px] bg-cyan-500/40" />
-            <span className="relative px-6 text-2xl sm:text-3xl md:text-4xl font-sans text-muted-foreground bg-background">I'm Alex</span>
-          </div>
-
-          {/* Role */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-semibold mb-8 tracking-tight bg-gradient-to-r from-violet-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-            Software Developer
+          {/* Name */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+            I'm Alex
           </h2>
+
+          {/* Role with line */}
+          <div className="relative my-6">
+            <div className="absolute left-0 right-0 top-1/2 h-[1px] bg-cyan-500/40 -translate-y-1/2" />
+            <span className="relative px-6 text-xl sm:text-2xl md:text-3xl font-sans text-muted-foreground bg-background">
+              AI-Augmented Product Builder
+            </span>
+          </div>
 
           {/* Subheading */}
           <motion.p
@@ -41,7 +43,7 @@ export function HeroSection() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Building Telegram bots, mini-apps, web services and AI automations. I deliver end-to-end solutions — from idea and prototype to production-ready products that solve real business challenges.
+            Turning ideas into production-ready Telegram Bots, Mini Apps & Web Services in days, not weeks. I architect solutions using AI-powered workflows to deliver fast, scalable products.
           </motion.p>
 
           {/* Hero Image */}
