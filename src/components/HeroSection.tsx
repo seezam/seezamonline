@@ -16,13 +16,23 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-4xl mx-auto text-center"
         >
           {/* Main heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold mb-6 tracking-tight">
-            <span className="text-gradient">seezam</span>
-            <span className="text-muted-foreground">.online</span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans font-semibold mb-4 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+            Hello!
           </h1>
+
+          {/* Name with full-width line */}
+          <div className="relative my-8">
+            <div className="absolute left-0 right-0 bottom-0 h-[1px] bg-cyan-500/40" />
+            <span className="relative px-6 text-2xl sm:text-3xl md:text-4xl font-sans text-muted-foreground bg-background">I'm Alex</span>
+          </div>
+
+          {/* Role */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-semibold mb-8 tracking-tight bg-gradient-to-r from-violet-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+            Software Developer
+          </h2>
 
           {/* Subheading */}
           <motion.p
