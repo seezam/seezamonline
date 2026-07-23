@@ -42,16 +42,15 @@ export default function TelegramBots() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              Development of{" "}
-              <span className="text-cyan-400">Telegram Bots</span>
+              Telegram Bots That Work While You Sleep
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Smart bots for business automation, customer support and sales growth 24/7. From simple commands to complex multi-functional systems — we create solutions that work for you.
+              I build intelligent bots that automate customer support, qualify leads, and streamline your business workflows — all inside Telegram.
             </p>
 
             {/* Video */}
-            <div className="flex justify-center mb-14">
+            <div className="flex justify-center mb-10">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-cyan-500/20 blur-3xl scale-110" />
                 <video
@@ -64,6 +63,20 @@ export default function TelegramBots() {
                 />
               </div>
             </div>
+
+            <div className="max-w-lg mx-auto mb-10">
+              <p className="text-muted-foreground text-sm mb-4">What you get:</p>
+              <div className="text-left space-y-2 text-muted-foreground text-sm">
+                <p>✓ 24/7 automated responses to common questions</p>
+                <p>✓ Lead capture and qualification</p>
+                <p>✓ Integration with your existing tools</p>
+                <p>✓ From simple auto-responders to complex multi-step systems</p>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-sm mb-6">
+              Fast delivery • Clean architecture • Crypto-friendly
+            </p>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
   {
     icon: Smartphone,
     title: "Telegram Mini Apps",
-    description: "Full-featured applications inside Telegram",
+    description: "Full-featured web apps that run inside Telegram. No downloads, instant access for your users.",
     tag: "mini-app",
     path: "/mini-apps"
   },
