@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import TelegramBots from "./pages/TelegramBots";
@@ -33,6 +34,8 @@ function RouterContent() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useSEO(location.pathname);
 
   return (
     <Routes key={location.pathname}>

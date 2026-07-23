@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 export default function MiniApps() {
   const features = [
     {
-      icon: Layers,
-      title: "Any Functionality",
-      description: "E-commerce, booking, games, dashboards — everything that works in a browser works in Telegram. Create full-featured applications without platform restrictions."
-    },
-    {
       icon: Zap,
-      title: "Instant Launch",
-      description: "Users open the app in one click, without registration or download. No App Store, Google Play or long installations — straight to business."
+      title: "Frictionless UX",
+      description: "Users open the app in one click. No App Store approvals, no downloads, no registration barriers. Straight to business."
     },
     {
       icon: Globe,
-      title: "Cross-platform",
-      description: "One app works on iOS, Android and Desktop — everywhere where Telegram exists. No need to maintain three separate codebases anymore."
+      title: "Cross-Platform by Default",
+      description: "One codebase works perfectly on iOS, Android, and Desktop. No need to maintain three separate apps."
     },
     {
       icon: Smartphone,
-      title: "Native UX",
-      description: "Integration with Telegram interface, theming and native gestures. The app feels like part of the messenger, not a third-party website."
+      title: "Native Feel",
+      description: "Deep integration with Telegram UI, themes, and native gestures. It feels like a part of the messenger, not a third-party site."
+    },
+    {
+      icon: Layers,
+      title: "Web3 & E-commerce Ready",
+      description: "Perfect for token gating, crypto payments, booking systems, or seamless checkout flows."
     }
   ];
 
@@ -46,7 +46,7 @@ export default function MiniApps() {
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Full-featured web applications right inside Telegram — without installing additional software. From online stores to gaming platforms — everything works in one place.
+              Full-featured web applications running natively inside Telegram. No downloads, no friction — just instant access for your users.
             </p>
 
             {/* Video */}
@@ -104,11 +104,10 @@ export default function MiniApps() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-sans font-bold mb-6">
-              Idea for a Mini App?
+              Have a Mini App idea?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              Tell me about your project — we'll discuss technical implementation and timelines.
-              I'll help turn your concept into a working application.
+              Let's discuss the technical implementation and timeline. I turn concepts into working products fast.
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">

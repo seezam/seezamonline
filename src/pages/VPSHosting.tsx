@@ -6,23 +6,23 @@ export default function VPSHosting() {
   const features = [
     {
       icon: Shield,
-      title: "Protection & Security",
-      description: "DDoS protection, firewalls, regular backups — your data is under reliable guard. Automatic backup and recovery in case of failures."
+      title: "DDoS Protection",
+      description: "Enterprise-grade DDoS mitigation and automated backups. Your data is safe and recoverable."
     },
     {
       icon: Zap,
-      title: "High Performance",
-      description: "NVMe SSD, powerful processors and up to 64GB RAM for any tasks. Dedicated resources without neighbors on the same hardware — stable speed 24/7."
+      title: "Raw Performance",
+      description: "NVMe SSDs, dedicated vCPUs, and guaranteed RAM. No noisy neighbors, no resource throttling."
     },
     {
       icon: Globe,
-      title: "Global Availability",
-      description: "Data centers in Europe and Asia — choose a location closer to your customers. Low pings and high availability worldwide."
+      title: "Global Locations",
+      description: "Choose from data centers in Europe and Asia. Lower latency for your target audience."
     },
     {
       icon: Server,
-      title: "Scalability",
-      description: "Instant resource increase without downtime — from 1 to 100+ servers. Adapt to load without moving and downtime."
+      title: "Easy Scaling",
+      description: "Upgrade CPU, RAM, or storage in minutes without migration headaches or downtime."
     }
   ];
 
@@ -51,8 +51,7 @@ export default function VPSHosting() {
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Reliable virtual servers with fast SSD and round-the-clock support.
-              Deploy your project in hours, not days. Full control and flexibility for your tasks.
+              High-performance virtual servers with NVMe SSD storage and instant deployment. Full root access and 24/7 monitoring.
             </p>
           </div>
         </div>
@@ -98,12 +97,11 @@ export default function VPSHosting() {
               Need a Server?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              I'll help you choose a configuration for your tasks and budget.
-              Consultation — free. Selection — within 30 minutes.
+              I'll help you choose the right configuration for your budget and needs. Free consultation.
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Consultation
+                Get Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>

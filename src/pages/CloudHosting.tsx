@@ -6,23 +6,23 @@ export default function CloudHosting() {
   const features = [
     {
       icon: Layers,
-      title: "Flexible Architecture",
-      description: "Microservices, containerization (Docker, Kubernetes), serverless — I'll find the optimal solution for your project. Ready for growth and changes."
+      title: "Modern Architecture",
+      description: "Microservices, Docker containers, and Kubernetes orchestration. Built for flexibility and easy updates."
     },
     {
       icon: Zap,
-      title: "Auto-scaling",
-      description: "Resources increase and decrease automatically based on load. Traffic spikes are no longer a problem — everything works smoothly."
+      title: "Auto-Scaling",
+      description: "Resources automatically adjust based on traffic. Traffic spikes are no longer a problem — everything works smoothly."
     },
     {
       icon: Shield,
-      title: "Fault Tolerance",
-      description: "Redundancy at the server, network and data center level — 99.9% uptime. Your services are always available, even during hardware failures."
+      title: "High Availability",
+      description: "Redundant setups and proactive monitoring to ensure your service stays online (targeting 99.9% uptime)."
     },
     {
       icon: Cloud,
-      title: "Pay-as-you-go",
-      description: "Pay only for used resources — save up to 40% compared to fixed tariffs. No overpayments for idle capacity."
+      title: "Cost Optimization",
+      description: "Pay-as-you-go architectures that eliminate wasted spend on idle resources. No overpaying for fixed servers."
     }
   ];
 
@@ -40,12 +40,11 @@ export default function CloudHosting() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              <span className="text-gradient">Cloud Hosting</span>
+              <span className="text-gradient">Cloud Infrastructure</span>
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Scalable infrastructure for projects of any size — from startup to enterprise.
-              Modern architecture that grows with your business.
+              Scalable, resilient cloud architecture designed for growth. From startups to enterprise — infrastructure that adapts to your needs.
             </p>
           </div>
         </div>
@@ -91,8 +90,7 @@ export default function CloudHosting() {
               Ready to Scale?
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              I'll build cloud infrastructure for your tasks.
-              Audit of current architecture — free.
+              Let's audit your current setup or design a cost-effective cloud architecture from scratch.
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
