@@ -30,7 +30,7 @@ export function HeroSection() {
 
           {/* Role */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-            AI-Augmented Product Builder
+            AI-augmented product builder
           </h2>
 
           {/* Subheading */}

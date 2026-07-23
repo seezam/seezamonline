@@ -7,8 +7,8 @@ type SEOConfig = {
 
 const seoConfig: Record<string, SEOConfig> = {
   "/": {
-    title: "AI-Augmented Product Builder | Telegram Bots & Web Apps | Seezam",
-    description: "Turning ideas into production-ready Telegram Bots, Mini Apps & Web Services in days. Fast delivery, clean architecture, crypto-friendly.",
+    title: "AI-augmented product builder | Telegram bots & web apps | Seezam",
+    description: "Turning ideas into production-ready Telegram bots, mini apps & web services in days. Fast delivery, clean architecture, crypto-friendly.",
   },
   "/telegram-bots": {
     title: "Telegram Bots Development | AI Automation | Seezam",
@@ -35,8 +35,8 @@ const seoConfig: Record<string, SEOConfig> = {
     description: "Practical integration of LLMs and AI into business processes. Automate routine tasks, build custom knowledge bases, and scale fast.",
   },
   "default": {
-    title: "AI-Augmented Product Builder | Telegram Bots & Web Apps | Seezam",
-    description: "Turning ideas into production-ready Telegram Bots, Mini Apps & Web Services in days. Fast delivery, clean architecture, crypto-friendly.",
+    title: "AI-augmented product builder | Telegram bots & web apps | Seezam",
+    description: "Turning ideas into production-ready Telegram bots, mini apps & web services in days. Fast delivery, clean architecture, crypto-friendly.",
   },
 };
 

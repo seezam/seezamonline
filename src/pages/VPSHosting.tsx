@@ -47,7 +47,7 @@ export default function VPSHosting() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">VPS Hosting</span>
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">VPS hosting</span>
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">

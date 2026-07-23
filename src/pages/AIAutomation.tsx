@@ -40,7 +40,7 @@ export default function AIAutomation() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              <span className="text-gradient">AI Automation</span>
+              <span className="text-gradient">AI automation</span>
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">

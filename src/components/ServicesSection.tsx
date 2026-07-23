@@ -5,42 +5,42 @@ import { Link } from "react-router-dom";
   const services = [
   {
     icon: Bot,
-    title: "Telegram Bots",
+    title: "Telegram bots",
     description: "Smart automation for customer engagement and business processes inside Telegram",
     tag: "bot",
     path: "/telegram-bots"
   },
   {
     icon: Smartphone,
-    title: "Telegram Mini Apps",
+    title: "Telegram mini apps",
     description: "Full-featured web apps that run inside Telegram. No downloads, instant access for your users.",
     tag: "mini-app",
     path: "/mini-apps"
   },
   {
     icon: Globe,
-    title: "Web Applications",
+    title: "Web applications",
     description: "Fast, responsive SPAs and PWAs (React/Next.js) built for performance and scale",
     tag: "web",
     path: "/web-apps"
   },
   {
     icon: Server,
-    title: "VPS Hosting",
+    title: "VPS hosting",
     description: "Reliable virtual servers with fast SSD",
     tag: "vps",
     path: "/vps-hosting"
   },
   {
     icon: Cloud,
-    title: "Cloud Hosting",
+    title: "Cloud hosting",
     description: "Scalable infrastructure for your projects",
     tag: "cloud",
     path: "/cloud-hosting"
   },
   {
     icon: Cpu,
-    title: "AI Automation",
+    title: "AI automation",
     description: "Connecting LLMs and neural networks into your workflow. Make your business smarter.",
     tag: "ai",
     path: "/ai-automation"
@@ -71,7 +71,7 @@ export function ServicesSection() {
             // Services
           </p>
           <h2 className="text-3xl md:text-4xl font-sans font-bold mb-4">
-            What I Do
+            What I do
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
             Full-cycle development powered by AI efficiency

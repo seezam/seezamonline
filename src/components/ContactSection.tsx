@@ -20,7 +20,7 @@ export function ContactSection() {
             // Contact
           </p>
           <h2 className="text-3xl md:text-4xl font-sans font-bold mb-4">
-            Let's Work Together
+            Let's work together
           </h2>
           <p className="text-muted-foreground mb-10 leading-relaxed">
             Have a project or an idea? Let's discuss how we can bring it to life efficiently. I usually respond within a few hours.

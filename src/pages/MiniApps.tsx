@@ -42,7 +42,7 @@ export default function MiniApps() {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              Telegram <span className="text-purple-400">Mini Apps</span>
+              Telegram <span className="text-purple-400">mini apps</span>
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
