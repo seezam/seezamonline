@@ -42,7 +42,7 @@ export default function TelegramBots() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              Telegram Bots That Work While You Sleep
+              TELEGRAM BOTS THAT WORK WHILE YOU SLEEP
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
