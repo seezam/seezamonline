@@ -1,23 +1,28 @@
-import { Bot, MessageSquare, Zap, Shield, ArrowRight } from "lucide-react";
+import { Bot, Zap, Target, Link, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export default function TelegramBots() {
   const features = [
     {
-      icon: MessageSquare,
-      title: "Automated Support",
-      description: "Instant responses to customer inquiries, order and appointment processing. Your bot works 24/7 without getting tired or making mistakes. Customers get answers in seconds, not hours of waiting."
+      icon: Zap,
+      title: "24/7 Automated Support",
+      description: "Instant responses to customer inquiries, order and appointment processing. Your bot works around the clock without getting tired or making mistakes."
     },
     {
-      icon: Zap,
-      title: "Integrations",
-      description: "Connect to CRM, payment systems, databases and APIs. The bot becomes part of your ecosystem — synchronizing orders, clients, notifications and reports in real time."
+      icon: Target,
+      title: "Lead Capture & Qualification",
+      description: "Automatically collect and qualify leads. The bot asks the right questions and routes hot prospects directly to your sales team."
+    },
+    {
+      icon: Link,
+      title: "Seamless Integrations",
+      description: "Connect to CRM, payment systems, databases and APIs. The bot becomes part of your ecosystem — synchronizing orders, clients, and notifications in real time."
     },
     {
       icon: Shield,
-      title: "Security",
-      description: "Data protection, reliable authentication and access control; user role configuration, content filtering and spam protection. Your data and reputation are under reliable guard."
+      title: "Secure & Reliable",
+      description: "Data protection, authentication, access control, and spam filtering. Your data and reputation are under reliable guard."
     }
   ];
 
@@ -50,7 +55,7 @@ export default function TelegramBots() {
             </p>
 
             {/* Video */}
-            <div className="flex justify-center mb-10">
+            <div className="flex justify-center mb-14">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-cyan-500/20 blur-3xl scale-110" />
                 <video
@@ -63,28 +68,14 @@ export default function TelegramBots() {
                 />
               </div>
             </div>
-
-            <div className="max-w-lg mx-auto mb-10">
-              <p className="text-muted-foreground text-sm mb-4">What you get:</p>
-              <div className="text-left space-y-2 text-muted-foreground text-sm">
-                <p>✓ 24/7 automated responses to common questions</p>
-                <p>✓ Lead capture and qualification</p>
-                <p>✓ Integration with your existing tools</p>
-                <p>✓ From simple auto-responders to complex multi-step systems</p>
-              </div>
-            </div>
-
-            <p className="text-muted-foreground text-sm mb-6">
-              Fast delivery • Clean architecture • Crypto-friendly
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Features - bordered cards */}
+      {/* Features */}
       <section className="py-20 relative z-10">
         <div className="container">
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-16">
             {features.map((feature, i) => (
               <motion.div
                 key={i}
@@ -92,14 +83,20 @@ export default function TelegramBots() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex gap-5 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.07] hover:bg-white/[0.07] hover:border-white/[0.12] transition-colors duration-200"
+                className="flex gap-6 items-start"
               >
-                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-cyan-500/12 text-cyan-400">
-                  <feature.icon className="w-5 h-5" />
+                <div className="flex-shrink-0 mt-1">
+                  <div className="p-3 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl backdrop-blur-sm border border-cyan-500/20">
+                    <feature.icon className="w-8 h-8 text-cyan-400" />
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-sans font-semibold text-white mb-1 text-sm">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                <div className="flex-1">
+                  <h3 className="font-sans font-semibold text-2xl mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -111,6 +108,9 @@ export default function TelegramBots() {
       <section className="py-20 relative z-10">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
+            <p className="text-muted-foreground text-sm mb-6">
+              Fast delivery • Clean architecture • Crypto-friendly
+            </p>
             <p className="text-muted-foreground text-base mb-2">Ready to start?</p>
             <p className="text-muted-foreground text-sm mb-6">
               Describe your project and bot tasks. Write to us — we'll respond within a few hours.
