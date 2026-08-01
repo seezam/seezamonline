@@ -308,7 +308,7 @@
       </span>
     </a>
 
-    <a class="btn primary" id="vcf-link" href="#">
+    <a class="btn primary" href="./efimychev.vcf">
       <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
       <span class="label-main">Добавить меня в контакты</span>
     </a>
@@ -325,11 +325,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-  // vCard, built client-side and attached as a download link
-  var vcf = "BEGIN:VCARD\nVERSION:3.0\nN:Ефимычев;Алексей;;;\nFN:Алексей Ефимычев\nTITLE:Программист\nTEL;TYPE=CELL:+79160237677\nURL:https://seezam.online/\nEND:VCARD";
-  var blob = new Blob([vcf], { type: "text/vcard" });
-  document.getElementById('vcf-link').href = URL.createObjectURL(blob);
-
   // Owner mode: only shown when the page is opened with ?owner=1
   var isOwner = new URLSearchParams(window.location.search).get('owner') === '1';
   if (isOwner) {
