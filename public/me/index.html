@@ -308,7 +308,7 @@
       </span>
     </a>
 
-    <a class="btn primary" href="./efimychev.vcf">
+    <a class="btn primary" id="vcf-link" href="javascript:void(0)" role="button">
       <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
       <span class="label-main">Добавить меня в контакты</span>
     </a>
@@ -325,6 +325,36 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
+  // vCard share — на Android/iOS открывает адресную книгу через Web Share API,
+  // на десктопе — скачивает файл как fallback.
+  (function () {
+    var vcf = "BEGIN:VCARD\nVERSION:3.0\nN:Ефимычев;Алексей;;;\nFN:Алексей Ефимычев\nTITLE:Программист\nTEL;TYPE=CELL:+79160237677\nURL:https://seezam.online/\nEND:VCARD";
+    var blob = new Blob([vcf], { type: "text/vcard" });
+    var file = new File([blob], "efimychev.vcf", { type: "text/vcard" });
+
+    document.getElementById('vcf-link').addEventListener('click', function () {
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+        navigator.share({
+          files: [file],
+          title: 'Контакт',
+          text: 'Алексей Ефимычев'
+        }).catch(function () {
+          // Отмена или ошибка — переходим к fallback
+        });
+      }
+
+      // Fallback для десктопа и устройств без поддержки файлов в Web Share
+      setTimeout(function () {
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'efimychev.vcf';
+        a.click();
+        URL.revokeObjectURL(url);
+      }, 1000);
+    });
+  })();
+
   // Owner mode: only shown when the page is opened with ?owner=1
   var isOwner = new URLSearchParams(window.location.search).get('owner') === '1';
   if (isOwner) {
