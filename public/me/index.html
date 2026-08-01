@@ -325,8 +325,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-  // vCard share — на Android/iOS открывает адресную книгу через Web Share API,
-  // на десктопе — скачивает файл как fallback.
+  // vCard share — через Web Share API открывает системное меню,
+  // где можно выбрать «Контакты» для добавления.
   (function () {
     var vcf = "BEGIN:VCARD\nVERSION:3.0\nN:Ефимычев;Алексей;;;\nFN:Алексей Ефимычев\nTITLE:Программист\nTEL;TYPE=CELL:+79160237677\nURL:https://seezam.online/\nEND:VCARD";
     var blob = new Blob([vcf], { type: "text/vcard" });
@@ -339,19 +339,10 @@
           title: 'Контакт',
           text: 'Алексей Ефимычев'
         }).catch(function () {
-          // Отмена или ошибка — переходим к fallback
+          // Отмена — ничего не делаем
         });
       }
-
-      // Fallback для десктопа и устройств без поддержки файлов в Web Share
-      setTimeout(function () {
-        var url = URL.createObjectURL(blob);
-        var a = document.createElement('a');
-        a.href = url;
-        a.download = 'efimychev.vcf';
-        a.click();
-        URL.revokeObjectURL(url);
-      }, 1000);
+      // Если share не поддерживается — ничего не делаем (нет скачивания)
     });
   })();
 
