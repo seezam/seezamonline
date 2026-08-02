@@ -342,7 +342,13 @@
         try {
           await navigator.share({ files: [file], title: 'Контакт', text: 'Алексей Ефимычев' });
         } catch (err) {
-          // Отмена — ничего не делаем
+          if (err.name !== 'AbortError') {
+            // Реальная ошибка (не отмена пользователем) — откатываемся на скачивание
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'efimychev.vcf';
+            link.click();
+          }
         }
       }
       // canShare === false — не мешаем, ссылка скачает файл как обычно
