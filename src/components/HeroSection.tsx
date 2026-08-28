@@ -25,7 +25,7 @@ export function HeroSection() {
 
           {/* Role */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-            Indie Developer · AI-Powered Products
+            Building Telegram Bots, Mini Apps & Web Services
           </h2>
 
           {/* Subheading */}
@@ -35,7 +35,7 @@ export function HeroSection() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Turning ideas into production-ready Telegram Bots, Mini Apps & Web Services in days. As an indie dev, I architect solutions using AI-powered workflows to deliver fast, scalable products without agency overhead.
+            Turning ideas into production-ready products in days. AI-powered workflows, no agency overhead.
           </motion.p>
 
           {/* Hero Image */}
