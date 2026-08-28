@@ -25,3 +25,6 @@ dist-ssr
 # Build output for GitHub Pages
 # dist/ is committed to gh-pages branch via GitHub Actions
 .vercel
+
+# Sensitive files
+context.txt
