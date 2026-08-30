@@ -14,7 +14,7 @@
 <meta property="og:description" content="Электронная визитка">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <title>Контакты · SEEZAM</title>
 <style>
   :root{
@@ -32,7 +32,7 @@
   html,body{
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     -webkit-font-smoothing: antialiased;
     min-height: 100%;
   }
@@ -99,10 +99,11 @@
     margin-top: 26px;
   }
   .name{
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
     font-size: 34px;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
     line-height: 1.1;
   }
   .role{
@@ -114,7 +115,7 @@
     margin-top: 10px;
   }
   .agency{
-    font-family: 'Inter', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
     color: var(--text-muted);
     margin-top: 6px;
@@ -165,6 +166,7 @@
   }
   .btn .label-main{
     display:block;
+    text-transform: uppercase;
   }
 
   .btn.primary{
@@ -303,7 +305,7 @@
   .vcf-modal-btn{
     width: 100%; padding: 15px; background: var(--gold); border: none;
     border-radius: 2px; color: #17140c; font-size: 16px; font-weight: 600;
-    font-family: 'Inter', sans-serif; cursor: pointer;
+    font-family: 'JetBrains Mono', monospace; cursor: pointer;
   }
 </style>
 </head>
