@@ -222,6 +222,34 @@
     font-weight:500;
   }
 
+  .copy-link-btn{
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--hairline);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  .qr-block.visible .copy-link-btn{
+    display: block;
+  }
+  .copy-link-btn:active{
+    background: var(--panel-2);
+    border-color: var(--gold-dim);
+  }
+  .copy-link-btn.copied{
+    color: var(--text-muted);
+    border-color: transparent;
+  }
+
   /* Home screen hint */
   details{
     margin-top: 18px;
@@ -370,7 +398,7 @@
   <div class="owner-tag" id="owner-tag">режим владельца</div>
   <div class="qr-block" id="qr-block">
     <div id="qr"></div>
-    <div class="qr-text">QR ДЛЯ ОТКРЫТИЯ ВИЗИТКИ</div>
+    <button id="copy-link" class="copy-link-btn">КОПИРОВАТЬ ССЫЛКУ</button>
   </div>
 
   <!-- VCF modal -->
@@ -454,6 +482,39 @@
       colorLight: "#ffffff",
       correctLevel: QRCode.CorrectLevel.M
     });
+
+    // Copy link feature
+    var btn = document.getElementById('copy-link');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var url = window.location.origin + window.location.pathname;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function() {
+            btn.textContent = 'СКОПИРОВАНО';
+            btn.classList.add('copied');
+            setTimeout(function() {
+              btn.textContent = 'КОПИРОВАТЬ ССЫЛКУ';
+              btn.classList.remove('copied');
+            }, 1500);
+          });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = url;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          btn.textContent = 'СКОПИРОВАНО';
+          btn.classList.add('copied');
+          setTimeout(function() {
+            btn.textContent = 'КОПИРОВАТЬ ССЫЛКУ';
+            btn.classList.remove('copied');
+          }, 1500);
+        }
+      });
+    }
   }
 </script>
 </body>
