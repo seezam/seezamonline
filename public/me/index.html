@@ -337,6 +337,136 @@
     border-radius: 2px; color: #17140c; font-size: 16px; font-weight: 600;
     font-family: 'JetBrains Mono', monospace; cursor: pointer;
   }
+
+  /* Install to home screen modal */
+  .install-overlay{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.72);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 101;
+  }
+  .install-overlay.visible{ display: flex; }
+  .install-modal{
+    width: 100%;
+    max-width: 360px;
+    background: var(--panel);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 28px 24px 24px;
+    animation: install-rise .35s ease both;
+  }
+  @keyframes install-rise{
+    from{ opacity:0; transform: translateY(12px) scale(0.98); }
+    to{ opacity:1; transform: translateY(0) scale(1); }
+  }
+  .install-icon{
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: rgba(182,146,79,0.14);
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 18px;
+  }
+  .install-icon svg{ width: 26px; height: 26px; stroke: var(--gold); }
+  .install-title{ font-size: 19px; font-weight: 600; color: var(--text); text-align: center; margin-bottom: 6px; }
+  .install-sub{ font-size: 14px; color: var(--text-muted); text-align: center; margin-bottom: 24px; line-height: 1.5; }
+  .install-steps{ display: flex; flex-direction: column; gap: 16px; margin-bottom: 20px; }
+  .install-step{ display: flex; align-items: flex-start; gap: 14px; }
+  .install-step-num{
+    flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(182,146,79,0.14); border: 1px solid var(--gold);
+    color: var(--gold); font-size: 15px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .install-step-text{ font-size: 15px; color: var(--text); line-height: 1.45; padding-top: 4px; }
+  .install-step-text b{ color: var(--gold); }
+  .install-diagram{
+    margin: 12px auto 16px;
+    padding: 14px;
+    background: var(--panel-2);
+    border: 1px solid var(--hairline);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .install-diagram svg{ stroke: var(--gold); fill: none; }
+  .install-actions{ display: flex; gap: 10px; margin-bottom: 18px; }
+  .install-actions button{
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 2px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+  .install-actions .btn-save{
+    background: var(--gold); border: 1px solid var(--gold);
+    color: #17140c; font-weight: 600;
+  }
+  .install-actions .btn-save:active{ background: #c9a55a; }
+  .install-actions .btn-later{
+    background: transparent; border: 1px solid var(--hairline);
+    color: var(--text-muted);
+  }
+  .install-actions .btn-later:active{ border-color: var(--gold-dim); color: var(--text); }
+  .install-actions .btn-next{
+    background: var(--gold); border: 1px solid var(--gold);
+    color: #17140c; font-weight: 600;
+  }
+  .install-actions .btn-done{
+    background: var(--gold); border: 1px solid var(--gold);
+    color: #17140c; font-weight: 600;
+  }
+  .install-success{
+    text-align: center;
+    padding: 10px 0;
+  }
+  .install-success .check{
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .install-success p{
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .install-success .sub{
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .install-share-link{
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--hairline);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s ease;
+    margin-top: 4px;
+  }
+  .install-share-link:active{
+    background: var(--panel-2);
+    border-color: var(--gold-dim);
+  }
+  .install-share-link.copied{
+    color: var(--text-muted);
+    border-color: transparent;
+  }
+  .install-hidden{ display: none; }
 </style>
 </head>
 <body>
@@ -421,6 +551,97 @@
       </div>
     </div>
     <button class="vcf-modal-btn" id="vcf-continue-btn">Продолжить</button>
+  </div>
+</div>
+
+<!-- Install to home screen modal -->
+<div class="install-overlay" id="install-overlay">
+  <div class="install-modal">
+    <!-- Screen 1: Initial prompt -->
+    <div id="install-screen-prompt">
+      <div class="install-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </div>
+      <div class="install-title">Сохранить визитку на экран</div>
+      <div class="install-sub">Чтобы быстро вернуться к контактам — добавьте эту страницу на домашний экран вашего телефона.</div>
+      <div class="install-actions">
+        <button class="btn-save" id="install-save-btn">Сохранить</button>
+        <button class="btn-later" id="install-later-btn">Позже</button>
+      </div>
+    </div>
+
+    <!-- Screen 2: Android instruction -->
+    <div id="install-screen-android" class="install-hidden">
+      <div class="install-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <div class="install-title">Шаг 1</div>
+      <div class="install-sub">Нажмите меню <b>⋮</b> (три точки) в правом верхнем углу</div>
+      <div class="install-diagram">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="28" height="28" rx="3" stroke-width="1"/>
+          <circle cx="16" cy="10" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="16" cy="22" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="install-actions">
+        <button class="btn-next" id="install-android-next">Далее →</button>
+      </div>
+    </div>
+
+    <!-- Screen 3: Android step 2 -->
+    <div id="install-screen-android2" class="install-hidden">
+      <div class="install-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A20 20 0 0 0 18 3h-2a2 2 0 0 0-2 2v13a2 2 0 0 1-4 0V5a2 2 0 0 0-4 0v13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2z"/></svg>
+      </div>
+      <div class="install-title">Шаг 2</div>
+      <div class="install-sub">Выберите <b>«Добавить на главный экран»</b></div>
+      <div class="install-diagram">
+        <svg width="120" height="64" viewBox="0 0 120 64" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="2" y="2" width="116" height="60" rx="3"/>
+          <text x="10" y="20" font-size="8" fill="currentColor" stroke="none" font-family="sans-serif">• Написать в WhatsApp</text>
+          <text x="10" y="34" font-size="8" fill="currentColor" stroke="none" font-family="sans-serif">• Написать в Telegram</text>
+          <text x="10" y="48" font-size="8" fill="#b6924f" stroke="none" font-family="sans-serif">✓ Добавить на главный экран</text>
+        </svg>
+      </div>
+      <div class="install-actions">
+        <button class="btn-done" id="install-android-done">Готово ✓</button>
+      </div>
+    </div>
+
+    <!-- Screen 4: iOS instruction -->
+    <div id="install-screen-ios" class="install-hidden">
+      <div class="install-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" fill="none"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </div>
+      <div class="install-title">Инструкция для Safari</div>
+      <div class="install-sub">1. Нажмите кнопку <b>«Поделиться»</b> <span style="display:inline-block;vertical-align:middle;">↑</span> внизу экрана<br>2. Прокрутите вниз и выберите <b>«На экран "Домой"»</b></div>
+      <div class="install-diagram">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="10" y="5" width="60" height="70" rx="5"/>
+          <rect x="18" y="12" width="44" height="40" rx="2" fill="rgba(182,146,79,0.08)"/>
+          <circle cx="40" cy="65" r="6" fill="rgba(182,146,79,0.2)" stroke="#b6924f"/>
+          <path d="M40 62 L40 68 M37 65 L43 65" stroke="#17140c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="install-actions">
+        <button class="btn-done" id="install-ios-done">Готово ✓</button>
+      </div>
+    </div>
+
+    <!-- Screen 5: Success -->
+    <div id="install-screen-success" class="install-hidden">
+      <div class="install-success">
+        <div class="check">✓</div>
+        <p>Визитка добавлена!</p>
+        <div class="sub">Теперь она всегда под рукой.</div>
+        <button class="btn-done" id="install-success-close" style="width:100%; padding:14px;">Отлично</button>
+      </div>
+    </div>
+
+    <!-- Share link fallback (always visible at bottom) -->
+    <button class="install-share-link" id="install-share-btn">📎 Отправить ссылку себе</button>
   </div>
 </div>
 
@@ -517,6 +738,138 @@
       });
     }
   }
+
+  // Install to home screen modal — only for visitors (not owner mode)
+  (function () {
+    if (isOwner) return;
+
+    var overlay = document.getElementById('install-overlay');
+    var screenPrompt = document.getElementById('install-screen-prompt');
+    var screenAndroid = document.getElementById('install-screen-android');
+    var screenAndroid2 = document.getElementById('install-screen-android2');
+    var screenIos = document.getElementById('install-screen-ios');
+    var screenSuccess = document.getElementById('install-screen-success');
+
+    var saved = sessionStorage.getItem('vcard_install_shown');
+    if (saved) return;
+
+    // Platform detection
+    var ua = navigator.userAgent;
+    var isIOS = /iPad|iPhone|iPod/.test(ua);
+    var isAndroidChrome = /Android/.test(ua) && /Chrome/.test(ua) && !/Edge/.test(ua);
+    var platform = isIOS ? 'ios' : (isAndroidChrome ? 'android' : 'generic');
+
+    function showScreen(screen) {
+      [screenPrompt, screenAndroid, screenAndroid2, screenIos, screenSuccess].forEach(function (s) {
+        s.classList.toggle('install-hidden', s !== screen);
+      });
+    }
+
+    function showOverlay() {
+      overlay.classList.add('visible');
+      showScreen(screenPrompt);
+    }
+
+    function closeOverlay() {
+      overlay.classList.remove('visible');
+      sessionStorage.setItem('vcard_install_shown', '1');
+    }
+
+    // Show after 5 seconds
+    setTimeout(function () {
+      if (!sessionStorage.getItem('vcard_install_shown')) {
+        showOverlay();
+      }
+    }, 5000);
+
+    // "Save" button → go to platform-specific instruction
+    document.getElementById('install-save-btn').addEventListener('click', function () {
+      if (platform === 'ios') {
+        showScreen(screenIos);
+      } else if (platform === 'android') {
+        showScreen(screenAndroid);
+      } else {
+        // Generic — treat as Android-style
+        showScreen(screenAndroid);
+      }
+    });
+
+    // "Later" button — dismiss and remember
+    document.getElementById('install-later-btn').addEventListener('click', function () {
+      closeOverlay();
+    });
+
+    // Click overlay background → dismiss
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeOverlay();
+    });
+
+    // Android: step 2
+    document.getElementById('install-android-next').addEventListener('click', function () {
+      showScreen(screenAndroid2);
+    });
+
+    // Android: done
+    document.getElementById('install-android-done').addEventListener('click', function () {
+      showScreen(screenSuccess);
+    });
+
+    // iOS: done
+    document.getElementById('install-ios-done').addEventListener('click', function () {
+      showScreen(screenSuccess);
+    });
+
+    // Success: close
+    document.getElementById('install-success-close').addEventListener('click', function () {
+      closeOverlay();
+    });
+
+    // Share link button — copy link to clipboard so user can send it to themselves
+    document.getElementById('install-share-btn').addEventListener('click', function () {
+      var cleanUrl = window.location.origin + window.location.pathname;
+      var btn = this;
+
+      if (navigator.share && navigator.canShare) {
+        try {
+          navigator.share({ url: cleanUrl }).catch(function () {
+            fallbackCopy(btn, cleanUrl);
+          });
+        } catch (e) {
+          fallbackCopy(btn, cleanUrl);
+        }
+      } else {
+        fallbackCopy(btn, cleanUrl);
+      }
+
+      function fallbackCopy(b, url) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () {
+            b.textContent = '✓ ССЫЛКА СКОПИРОВАНА';
+            b.classList.add('copied');
+            setTimeout(function () {
+              b.textContent = '📎 Отправить ссылку себе';
+              b.classList.remove('copied');
+            }, 2000);
+          });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = url;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          b.textContent = '✓ ССЫЛКА СКОПИРОВАНА';
+          b.classList.add('copied');
+          setTimeout(function () {
+            b.textContent = '📎 Отправить ссылку себе';
+            b.classList.remove('copied');
+          }, 2000);
+        }
+      }
+    });
+  })();
 </script>
 </body>
 </html>

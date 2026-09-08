@@ -6,6 +6,7 @@ import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { useSEO } from "@/hooks/useSEO";
 import Index from "./pages/Index";
+import { Navigate } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import TelegramBots from "./pages/TelegramBots";
 import MiniApps from "./pages/MiniApps";
@@ -46,6 +47,7 @@ function RouterContent() {
       <Route path="/vps-hosting" element={<VPSHosting />} />
       <Route path="/cloud-hosting" element={<CloudHosting />} />
       <Route path="/ai-automation" element={<AIAutomation />} />
+      <Route path="/me" element={<Navigate to="/me/" replace />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
