@@ -635,8 +635,17 @@
     });
   })();
 
-  // Owner mode: only shown when the page is opened with ?owner=1
-  var isOwner = new URLSearchParams(window.location.search).get('owner') === '1';
+  // Owner mode: shown when ?owner=1 is present OR when localStorage remembers the owner
+  // This ensures that after PWA installation (which opens ./ not ./?owner=1),
+  // the owner still sees their tools.
+  var urlParams = new URLSearchParams(window.location.search);
+  var isOwner = urlParams.get('owner') === '1' || localStorage.getItem('vcard_owner') === '1';
+
+  // If ?owner=1 is in URL, persist it to localStorage so PWA installs remember the owner
+  if (urlParams.get('owner') === '1') {
+    localStorage.setItem('vcard_owner', '1');
+  }
+
   if (isOwner) {
     document.getElementById('qr-block').classList.add('visible');
     document.getElementById('owner-tag').classList.add('visible');
