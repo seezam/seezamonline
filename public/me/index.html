@@ -635,15 +635,15 @@
     });
   })();
 
-  // Owner mode: shown when ?owner=1 is present OR when localStorage remembers the owner
-  // This ensures that after PWA installation (which opens ./ not ./?owner=1),
-  // the owner still sees their tools.
-  var urlParams = new URLSearchParams(window.location.search);
-  var isOwner = urlParams.get('owner') === '1' || localStorage.getItem('vcard_owner') === '1';
+  // Owner mode: only shown when ?owner=1 is present in URL
+  // sessionStorage used so it persists within a single tab (PWA install context),
+  // but doesn't leak to other tabs/windows (prevents receiver from seeing owner tools).
+  var isOwner = new URLSearchParams(window.location.search).get('owner') === '1'
+    || sessionStorage.getItem('vcard_owner') === '1';
 
-  // If ?owner=1 is in URL, persist it to localStorage so PWA installs remember the owner
-  if (urlParams.get('owner') === '1') {
-    localStorage.setItem('vcard_owner', '1');
+  // Remember owner mode within this tab/session
+  if (new URLSearchParams(window.location.search).get('owner') === '1') {
+    sessionStorage.setItem('vcard_owner', '1');
   }
 
   if (isOwner) {
