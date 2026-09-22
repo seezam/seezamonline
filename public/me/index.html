@@ -9,7 +9,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="icon" href="data:;base64,=">
-<link rel="manifest" href="./manifest.json">
+<link rel="manifest" href="./manifest.json" id="manifest-link">
+<script>
+  if (new URLSearchParams(location.search).get('owner') === '1') {
+    document.getElementById('manifest-link').href = './manifest-owner.json';
+  }
+</script>
 <title>Контакты · SEEZAM</title>
 <meta property="og:title" content="Контакты · SEEZAM">
 <meta property="og:description" content="Электронная визитка">
@@ -581,7 +586,7 @@
       </div>
       <div class="install-title">Добавить вручную</div>
       <div class="install-sub" id="install-fallback-text">
-        Нажмите кнопку «Поделиться» <span style="display:inline-block;vertical-align:middle;">↑</span> в вашем браузере и выберите <b>«На экран "Домой"»</b> или <b>«Добавить на главный экран»</b>.
+        Нажмите кнопку «Поделиться» <span style="display:inline-block;vertical-align:middle;">↑</span> в вашем браузере и выберите <b>«На экран &quot;Домой&quot;»</b> или <b>«Добавить на главный экран»</b>.
       </div>
       <div class="install-actions">
         <button class="btn-done" id="install-fallback-done">Понятно</button>
@@ -635,23 +640,16 @@
     });
   })();
 
-  // Owner mode: only shown when ?owner=1 is present in URL
-  // sessionStorage used so it persists within a single tab (PWA install context),
-  // but doesn't leak to other tabs/windows (prevents receiver from seeing owner tools).
-  var isOwner = new URLSearchParams(window.location.search).get('owner') === '1'
-    || sessionStorage.getItem('vcard_owner') === '1';
-
-  // Remember owner mode within this tab/session
-  if (new URLSearchParams(window.location.search).get('owner') === '1') {
-    sessionStorage.setItem('vcard_owner', '1');
-  }
+  // Owner mode: only shown when ?owner=1 is present in URL.
+  // Никаких sessionStorage — режим определяется исключительно URL.
+  var isOwner = new URLSearchParams(window.location.search).get('owner') === '1';
 
   if (isOwner) {
     document.getElementById('qr-block').classList.add('visible');
     document.getElementById('owner-tag').classList.add('visible');
 
-    // QR always encodes the CLEAN link (no ?owner=1), whatever domain this ends up on —
-    // so whoever scans it lands on the plain visitor view, never the owner view.
+    // QR всегда кодирует "чистую" ссылку (без ?owner=1) —
+    // чтобы сканирующие попадали в режим получателя, а не владельца.
     var cleanUrl = window.location.origin + window.location.pathname;
     new QRCode(document.getElementById("qr"), {
       text: cleanUrl,
@@ -662,7 +660,7 @@
       correctLevel: QRCode.CorrectLevel.M
     });
 
-    // Copy link feature
+    // Кнопка копирования ссылки
     var btn = document.getElementById('copy-link');
     if (btn) {
       btn.addEventListener('click', function() {
@@ -717,7 +715,7 @@
     if (isIOS) {
       fallbackText.innerHTML = 'В Safari нажмите кнопку <b>«Поделиться»</b> <span style="display:inline-block;vertical-align:middle;">↑</span> (внизу экрана) и выберите <b>«На экран &quot;Домой&quot;»</b>.';
     } else {
-      fallbackText.innerHTML = 'В вашем браузере нажмите кнопку <b>«Поделиться»</b> <span style="display:inline-block;vertical-align:middle;">↑</span> и выберите <b>«Добавить на главный экран»</b> или <b>«Добавить на экран "Домой"»</b>.';
+      fallbackText.innerHTML = 'В вашем браузере нажмите кнопку <b>«Поделиться»</b> <span style="display:inline-block;vertical-align:middle;">↑</span> и выберите <b>«Добавить на главный экран»</b> или <b>«Добавить на экран &quot;Домой&quot;»</b>.';
     }
 
     function showScreen(screen) {

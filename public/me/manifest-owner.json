@@ -2,7 +2,7 @@
   "name": "Контакты · Seezam",
   "short_name": "Seezam",
   "id": "/me/",
-  "start_url": "./",
+  "start_url": "./?owner=1",
   "display": "standalone",
   "display_override": ["fullscreen", "standalone"],
   "background_color": "#0B0C0E",
