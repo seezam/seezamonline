@@ -1,58 +1,70 @@
 import { Cpu, Brain, Zap, Workflow, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { translations, type Locale } from "@/i18n";
 
-export default function AIAutomation() {
+interface AIAutomationProps {
+  locale: Locale;
+}
+
+export default function AIAutomation({ locale }: AIAutomationProps) {
+  const text = translations[locale].aiAutomation;
+
   const features = [
     {
       icon: Brain,
-      title: "LLM Integrations",
-      description: "Connect GPT, Claude and other models for content generation, data analysis, chatbots. Intelligent systems that understand context and learn from your data."
+      title: text.features[0].title,
+      description: text.features[0].description,
     },
     {
       icon: Workflow,
-      title: "Process Automation",
-      description: "Document processing, request classification, report generation — AI takes over the routine. Free your team for creative and strategic tasks."
+      title: text.features[1].title,
+      description: text.features[1].description,
     },
     {
       icon: Cpu,
-      title: "Custom Models",
-      description: "Retraining neural networks on your data — get accurate answers for your niche. Specialized models for medicine, law, e-commerce and other fields."
+      title: text.features[2].title,
+      description: text.features[2].description,
     },
     {
       icon: Zap,
-      title: "Fast Implementation",
-      description: "MVP in 2-4 weeks — from prototype to production with full integration into your stack. Test your hypothesis quickly and without big investments."
-    }
+      title: text.features[3].title,
+      description: text.features[3].description,
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <Header />
+
+      <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-br from-fuchsia-500/20 to-violet-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-500/5 to-fuchsia-500/5 rounded-full blur-3xl" />
+      </div>
+
+      <section className="relative py-20 md:py-32 overflow-hidden z-10 pt-28 md:pt-32">
         <div className="container relative z-10">
-          <div
-            className="max-w-3xl mx-auto text-center"
-          >
+          <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-8">
-              <div className="p-6 bg-primary/5 rounded-2xl">
-                <Cpu className="w-20 h-20 text-primary" />
+              <div className="p-6 bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 rounded-2xl backdrop-blur-sm border border-violet-500/20">
+                <Cpu className="w-20 h-20 text-violet-400" />
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              <span className="text-gradient">AI automation</span>
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent">{text.title}</span>
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Neural networks and LLM integration into business processes — automating routine tasks with AI.
-              Turn artificial intelligence into a real growth tool for your business.
+              {text.subtitle}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Features - Clean layout without blocks */}
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <div className="container">
           <div className="max-w-3xl mx-auto space-y-16">
             {features.map((feature, i) => (
@@ -65,8 +77,8 @@ export default function AIAutomation() {
                 className="flex gap-6 items-start"
               >
                 <div className="flex-shrink-0 mt-1">
-                  <div className="p-3 bg-primary/5 rounded-xl">
-                    <feature.icon className="w-8 h-8 text-primary" />
+                  <div className="p-3 bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 rounded-xl backdrop-blur-sm border border-violet-500/20">
+                    <feature.icon className="w-8 h-8 text-violet-400" />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -83,26 +95,26 @@ export default function AIAutomation() {
         </div>
       </section>
 
-      {/* CTA - Simple and clean */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 relative z-10">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-sans font-bold mb-6">
-              Want to Implement AI?
+              {text.sectionTitle}
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              I'll analyze your processes and suggest automation points.
-              Free audit — find out where AI will save you time and money.
+              {text.sectionDescription}
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Free Consultation
+                {text.button}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>
           </div>
         </div>
       </section>
+
+      <Footer locale={locale} />
     </div>
   );
 }

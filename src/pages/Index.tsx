@@ -1,17 +1,24 @@
+import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import type { Locale } from "@/i18n";
 
-const Index = () => {
+interface IndexProps {
+  locale: Locale;
+}
+
+const Index = ({ locale }: IndexProps) => {
   return (
     <div className="min-h-screen bg-background scanline">
+      <Header />
       <main>
-        <HeroSection />
-        <ServicesSection />
-        <ContactSection />
+        <HeroSection locale={locale} />
+        <ServicesSection locale={locale} />
+        <ContactSection locale={locale} />
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </div>
   );
 };

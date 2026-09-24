@@ -1,63 +1,69 @@
 import { Globe, Code, Zap, Smartphone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { translations, type Locale } from "@/i18n";
 
-export default function WebApps() {
+interface WebAppsProps {
+  locale: Locale;
+}
+
+export default function WebApps({ locale }: WebAppsProps) {
+  const text = translations[locale].webApps;
+
   const features = [
     {
       icon: Code,
-      title: "Modern Tech Stack",
-      description: "React, Next.js, TypeScript, TailwindCSS. Built for performance, type safety, and easy future scaling."
+      title: text.features[0].title,
+      description: text.features[0].description,
     },
     {
       icon: Zap,
-      title: "Performance First",
-      description: "Optimized loading, code splitting, and lazy loading. Your app loads instantly and keeps users engaged."
+      title: text.features[1].title,
+      description: text.features[1].description,
     },
     {
       icon: Smartphone,
-      title: "Fully Responsive",
-      description: "Flawless experience on every device — mobile, tablet, desktop. Mobile-first approach with real-device testing."
+      title: text.features[2].title,
+      description: text.features[2].description,
     },
     {
       icon: Globe,
-      title: "SEO-Ready",
-      description: "Server-side rendering (SSR) and proper meta tags for better Google ranking. Built to be found."
-    }
+      title: text.features[3].title,
+      description: text.features[3].description,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Optimized background gradients */}
+      <Header />
+
       <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-br from-cyan-500/20 to-emerald-500/20 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-emerald-500/5 to-cyan-500/5 rounded-full blur-3xl" />
       </div>
 
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden z-10">
+      <section className="relative py-20 md:py-32 overflow-hidden z-10 pt-28 md:pt-32">
         <div className="container relative z-10">
-          <div
-            className="max-w-3xl mx-auto text-center"
-          >
+          <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-8">
               <div className="p-6 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-2xl backdrop-blur-sm border border-emerald-500/20">
                 <Globe className="w-20 h-20 text-emerald-400" />
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-sans font-bold text-center leading-tight mb-5">
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Modern Web Applications</span>
+              <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">{text.title}</span>
             </h1>
 
             <p className="text-center text-muted-foreground text-base leading-relaxed max-w-lg mx-auto mb-10">
-              Fast, scalable SPAs and PWAs built with React, Next.js, and TypeScript. I deliver clean, maintainable code that performs.
+              {text.subtitle}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Features */}
       <section className="py-20 relative z-10">
         <div className="container">
           <div className="max-w-3xl mx-auto space-y-16">
@@ -89,25 +95,26 @@ export default function WebApps() {
         </div>
       </section>
 
-      {/* CTA */}
       <section id="contact" className="py-20 relative z-10">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-sans font-bold mb-6">
-              Need a Web App?
+              {text.sectionTitle}
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              From landing page to complex platform — built clean, fast, and right the first time.
+              {text.sectionDescription}
             </p>
             <Button size="lg" variant="glow" asChild>
               <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                Discuss Project
+                {text.button}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>
           </div>
         </div>
       </section>
+
+      <Footer locale={locale} />
     </div>
   );
 }
