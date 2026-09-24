@@ -1,13 +1,19 @@
-import { Send, Mail, MessageCircle, MessageSquare, Twitter } from "lucide-react";
+import { Send, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { translations, type Locale } from "@/i18n";
 
-export function ContactSection() {
+interface ContactSectionProps {
+  locale: Locale;
+}
+
+export function ContactSection({ locale }: ContactSectionProps) {
+  const text = translations[locale].contact;
+
   return (
     <section id="contact" className="py-20 md:py-32 relative">
-      {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-      
+
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,31 +23,15 @@ export function ContactSection() {
           className="max-w-2xl mx-auto text-center"
         >
           <p className="font-mono text-primary text-sm mb-3 tracking-widest uppercase">
-            // Contact
+            {text.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl font-sans font-bold mb-4">
-            Let's work together
+            {text.heading}
           </h2>
           <p className="text-muted-foreground mb-10 leading-relaxed">
-            Have a project or an idea? Let's discuss how we can bring it to life efficiently. I usually respond within a few hours.
+            {text.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button variant="glow" size="lg" asChild>
-              <a href="https://t.me/seezam" target="_blank" rel="noopener noreferrer">
-                <Send className="w-4 h-4" />
-                Telegram
-              </a>
-            </Button>
-            <Button variant="terminal" size="lg" asChild>
-              <a href="mailto:hello@seezam.online">
-                <Mail className="w-4 h-4" />
-                Email
-              </a>
-            </Button>
-          </div>
-
-          {/* Terminal-style contact info */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -87,7 +77,7 @@ export function ContactSection() {
               <p className="pt-2">
                 <span className="text-primary">$</span>{" "}
                 <span className="text-green-400">echo</span>{" "}
-                <span className="text-foreground">"Ready to ship your next project?"</span>
+                <span className="text-foreground">{text.terminalPrompt}</span>
                 <span className="w-2 h-4 bg-primary animate-blink inline-block ml-1" />
               </p>
             </div>

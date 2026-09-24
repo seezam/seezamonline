@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-image.jpg";
+import { translations, type Locale } from "@/i18n";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  locale: Locale;
+}
+
+export function HeroSection({ locale }: HeroSectionProps) {
+  const text = translations[locale].hero;
+  const [greetingLine, nameLine = ""] = text.greeting.split("\n");
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background grid pattern */}
       <div className="absolute inset-0 grid-pattern opacity-50" />
-      
-      {/* Gradient orbs */}
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-primary/20 rounded-full blur-[100px] animate-pulse-slow" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-glow-secondary/20 rounded-full blur-[100px] animate-pulse-slow" />
 
@@ -16,29 +21,34 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-5xl mx-auto text-center"
         >
-          {/* Main heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-medium mb-4 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-            Hello! I'm Alex
+          <h1 className="mx-auto max-w-3xl text-[2.2rem] leading-[1.05] tracking-[-0.06em] text-foreground sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem]">
+            <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+              {greetingLine}
+            </span>
+            {nameLine ? (
+              <span className="mt-1 block text-[0.72em] sm:text-[0.74em] md:text-[0.76em] lg:text-[0.78em] bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+                {nameLine}
+              </span>
+            ) : null}
           </h1>
 
-          {/* Role */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-            Building Telegram Bots, Mini Apps & Web Services
+          <h2 className="mx-auto mt-5 max-w-4xl text-[1.45rem] leading-[1.1] tracking-[-0.05em] text-foreground sm:text-[2rem] md:text-[2.8rem] lg:text-[3.6rem]">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+              {text.title}
+            </span>
           </h2>
 
-          {/* Subheading */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg"
           >
-            Turning ideas into production-ready products in days. AI-powered workflows, no agency overhead.
+            {text.subtitle}
           </motion.p>
 
-          {/* Hero Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -58,7 +68,6 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-
     </section>
   );
 }
