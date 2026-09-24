@@ -65,11 +65,11 @@ export function ServicesSection({ locale }: ServicesSectionProps) {
             const Icon = service.icon;
 
             return (
-              <Link key={service.tag} to={service.path} className="block">
+              <Link key={service.tag} to={service.path} className="block h-full">
                 <motion.div
                   key={service.tag}
                   variants={item}
-                  className="group relative p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:glow cursor-pointer"
+                  className="group relative h-full p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:glow cursor-pointer"
                 >
                   <Icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
                   <h3 className="font-sans font-semibold text-lg mb-2">
