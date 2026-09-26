@@ -107,9 +107,9 @@ export type HomeI18n = {
 export const translations: Record<Locale, HomeI18n> = {
   ru: {
     hero: {
-      greeting: "Привет!\nЯ Алексей",
-      title: "Создаю Telegram-ботов, мини-приложения и веб-сервисы",
-      subtitle: "Преобразую идеи в готовые продукты за несколько дней. Автоматизация на базе ИИ без лишних агентских расходов.",
+      greeting: "Привет! Я Алексей",
+      title: "",
+      subtitle: "Превращаю идеи в рабочие цифровые решения. Веб, боты, автоматизации — от прототипа до запуска",
     },
     services: {
       eyebrow: "// Услуги",
@@ -324,9 +324,9 @@ export const translations: Record<Locale, HomeI18n> = {
   },
   en: {
     hero: {
-      greeting: "Hello!\nI'm Alex",
-      title: "Building Telegram Bots, Mini Apps & Web Services",
-      subtitle: "Turning ideas into production-ready products in days. AI-powered workflows, no agency overhead.",
+      greeting: "Hello! I'm Alex",
+      title: "",
+      subtitle: "I turn ideas into working digital solutions. Web, bots, automation — from prototype to launch",
     },
     services: {
       eyebrow: "// Services",

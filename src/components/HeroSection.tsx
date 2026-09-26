@@ -24,7 +24,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
           className="max-w-5xl mx-auto text-center"
         >
           <h1 className="mx-auto max-w-3xl text-[2.2rem] leading-[1.05] tracking-[-0.06em] text-foreground sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem]">
-            <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+            <span className="block text-white">
               {greetingLine}
             </span>
             {nameLine ? (
@@ -35,7 +35,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
           </h1>
 
           <h2 className="mx-auto mt-5 max-w-4xl text-[1.45rem] leading-[1.1] tracking-[-0.05em] text-foreground sm:text-[2rem] md:text-[2.8rem] lg:text-[3.6rem]">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+            <span className="text-[#ffffff]">
               {text.title}
             </span>
           </h2>
@@ -44,7 +44,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg"
+            className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-base md:text-lg"
           >
             {text.subtitle}
           </motion.p>
