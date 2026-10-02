@@ -23,7 +23,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl mx-auto text-center"
         >
-          <h1 className="mx-auto max-w-3xl text-[2.2rem] leading-[1.05] tracking-[-0.06em] text-foreground sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem]">
+          <h1 className="mx-auto max-w-3xl text-[2.2rem] leading-[1.05] tracking-normal text-foreground sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem]">
             <span className="block text-white">
               {greetingLine}
             </span>
@@ -34,7 +34,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
             ) : null}
           </h1>
 
-          <h2 className="mx-auto mt-5 max-w-4xl text-[1.45rem] leading-[1.1] tracking-[-0.05em] text-foreground sm:text-[2rem] md:text-[2.8rem] lg:text-[3.6rem]">
+          <h2 className="mx-auto mt-5 max-w-4xl text-[1.45rem] leading-[1.1] tracking-normal text-foreground sm:text-[2rem] md:text-[2.8rem] lg:text-[3.6rem]">
             <span className="text-[#ffffff]">
               {text.title}
             </span>
