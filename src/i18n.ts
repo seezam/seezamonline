@@ -109,7 +109,7 @@ export const translations: Record<Locale, HomeI18n> = {
     hero: {
       greeting: "Привет! Я Алексей",
       title: "",
-      subtitle: "Превращаю идеи в рабочие цифровые решения. Веб, боты, автоматизации — от прототипа до запуска",
+      subtitle: "Превращаю идеи в рабочие цифровые решения. Веб, боты, автоматизации, сайты — от прототипа до запуска",
     },
     services: {
       eyebrow: "// Услуги",
@@ -326,7 +326,7 @@ export const translations: Record<Locale, HomeI18n> = {
     hero: {
       greeting: "Hello! I'm Alex",
       title: "",
-      subtitle: "I turn ideas into working digital solutions. Web, bots, automation — from prototype to launch",
+      subtitle: "I turn ideas into working digital solutions. Web, bots, automation, sites — from prototype to launch",
     },
     services: {
       eyebrow: "// Services",
