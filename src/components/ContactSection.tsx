@@ -55,6 +55,13 @@ export function ContactSection({ locale }: ContactSectionProps) {
               </p>
               <p>
                 <span className="text-primary">$</span>{" "}
+                <span className="text-muted-foreground">MAX:</span>{" "}
+                <a href="https://max.ru/u/f9LHodD0cOK6ubcg7dARuUimIpsTR39sGxdFM0JT3Eewdvhm5XlGVxlyh6c" className="text-foreground hover:text-primary transition-colors">
+                  seezam
+                </a>
+              </p>
+              <p>
+                <span className="text-primary">$</span>{" "}
                 <span className="text-muted-foreground">x:</span>{" "}
                 <a href="https://x.com/SeeZam" target="_blank" className="text-foreground hover:text-primary transition-colors">
                   @SeeZam
