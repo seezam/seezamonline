@@ -77,8 +77,8 @@ export function ContactSection({ locale }: ContactSectionProps) {
               <p>
                 <span className="text-primary">$</span>{" "}
                 <span className="text-muted-foreground">website:</span>{" "}
-                <a href="https://seezam.online" target="_blank" className="text-foreground hover:text-primary transition-colors">
-                  seezam.online
+                <a href="https://seezam.pro" target="_blank" className="text-foreground hover:text-primary transition-colors">
+                  seezam.pro
                 </a>
               </p>
               <p className="pt-2">

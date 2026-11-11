@@ -20,7 +20,7 @@ export function Footer({ locale }: FooterProps) {
         >
           <div className="font-mono text-sm">
             <span className="text-gradient font-bold">seezam</span>
-            <span className="text-muted-foreground">.online</span>
+            <span className="text-muted-foreground">.pro</span>
           </div>
 
           <p className="text-muted-foreground text-xs md:text-sm font-mono">
@@ -28,7 +28,7 @@ export function Footer({ locale }: FooterProps) {
           </p>
 
           <div className="text-xs md:text-sm text-muted-foreground font-mono">
-            seezam.online
+            seezam.pro
           </div>
         </motion.div>
       </div>

@@ -93,12 +93,12 @@ Last commit: **d837a0a** — `fix: removed AI Developer badge from HeroSection`
 
 - **Branch:** `main` (synced with `origin/main`)
 - **Last change:** cleaned HeroSection - removed AI Developer badge
-- **Site:** deployed to **seezam.online** via GitHub Pages
+- **Site:** deployed to **seezam.pro** via GitHub Pages
 - **Dev server:** port 8080
 
 ## Remembered context
 
-- **HeroSection:** clean title `seezam.online`, subtitle about Telegram bots/miniprograms/web services/AI automation, CTA button "Связаться" → `https://t.me/seezam`, hero image, stats (50+ projects, 3+ years experience, 24/7 support)
+- **HeroSection:** clean title `seezam.pro`, subtitle about Telegram bots/miniprograms/web services/AI automation, CTA button "Связаться" → `https://t.me/seezam`, hero image, stats (50+ projects, 3+ years experience, 24/7 support)
 - **Header:** simplified navigation, works on all pages
 - **8 pages:** Index, TelegramBots, MiniApps, WebApps, AIAutomation, CloudHosting, VPSHosting, NotFound
 - All pages use shared Header/Footer

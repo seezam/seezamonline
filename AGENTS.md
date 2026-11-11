@@ -10,7 +10,7 @@
 ## 1. Текущее состояние проекта
 
 **Проект:** Личный промо-сайт Алексея Ефимычева
-**URL:** https://seezam.online/
+**URL:** https://seezam.pro/
 **Хостинг:** GitHub Pages (бесплатно)
 **Ветка:** `main` → GitHub Actions (сборка из `src/` + `public/`) → Pages
 
@@ -60,7 +60,7 @@ seezamonline/
 ```
 
 ### Визитка (Digital Card)
-- **Путь:** `public/me/index.html` → https://seezam.online/me/
+- **Путь:** `public/me/index.html` → https://seezam.pro/me/
 - **Тип:** чистый HTML + CSS + JS, без фреймворков
 - **Контент:** фото, имя "Алексей Ефимычев", "WEB-РАЗРАБОТКА И ДИЗАЙН", кнопки: телефон, WhatsApp, Telegram, сайт, скачать vCard
 - **vCard:** `public/me/efimychev.vcf` — Web Share API + fallback скачивание
@@ -240,8 +240,8 @@ git push
 Механизм `?owner=1` — два взгляда на одну страницу:
 
 ```
-seezam.online/me/              → визитка без инструментов (получатель)
-seezam.online/me/?owner=1      → визитка + QR + копирование ссылки (владелец)
+seezam.pro/me/                  → визитка без инструментов (получатель)
+seezam.pro/me/?owner=1          → визитка + QR + копирование ссылки (владелец)
 ```
 
 - Один HTML-файл, нулевая серверная логика
@@ -265,8 +265,8 @@ seezam.online/me/?owner=1      → визитка + QR + копирование 
 **Режим определяется ТОЛЬКО по `?owner=1` в URL:**
 
 ```
-seezam.online/me/              → визитка без инструментов (получатель)
-seezam.online/me/?owner=1      → визитка + QR + копирование ссылки (владелец)
+seezam.pro/me/                  → визитка без инструментов (получатель)
+seezam.pro/me/?owner=1          → визитка + QR + копирование ссылки (владелец)
 ```
 
 - `localStorage` и `sessionStorage` для определения режима **убраны** (коммит `d908e28` — первая попытка; 22.09.2026 — окончательно) — они «прилипали» ко всему браузеру и получатель видел QR владельца
@@ -347,7 +347,7 @@ seezam.online/me/?owner=1      → визитка + QR + копирование 
 | Телефон | +7 916 023-76-77 |
 | WhatsApp | +79160237677 |
 | Telegram | @seezam |
-| Сайт | https://seezam.online |
+| Сайт | https://seezam.pro |
 
 ### Контекст не сохраняется между сессиями
 
@@ -388,8 +388,8 @@ seezam.online/me/?owner=1      → визитка + QR + копирование 
 
 | Ресурс | URL |
 |--------|-----|
-| Сайт | https://seezam.online/ |
-| Визитка | https://seezam.online/me/ |
+| Сайт | https://seezam.pro/ |
+| Визитка | https://seezam.pro/me/ |
 | Демо-бот | @seezam_demo_bot |
 | GitHub | https://github.com/seezam/seezamonline |
 | Telegram | https://t.me/seezam |

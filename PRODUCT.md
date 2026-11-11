@@ -55,7 +55,7 @@ Brand and identity facts already established in the project:
   - Phone: +7 916 023-76-77
   - WhatsApp: +79160237677
   - Telegram: @seezam
-  - Site: https://seezam.online/
+  - Site: https://seezam.pro/
 - The visual tone is professional, premium, minimal, and founder-led rather than noisy or mass-market.
 - The brand is factual and service-oriented; future work should preserve the real identity and avoid inflated startup-style claims.
 
@@ -63,8 +63,8 @@ Brand and identity facts already established in the project:
 
 Real project evidence that future work should preserve:
 
-- Main site: https://seezam.online/
-- VCard/contact page: https://seezam.online/me/
+- Main site: https://seezam.pro/
+- VCard/contact page: https://seezam.pro/me/
 - Source code in src/ and public/
 - Contact metadata in public/me/index.html and public/me/efimychev.vcf
 - Existing route structure: home, Telegram Bots, Mini Apps, Web Apps, VPS Hosting, Cloud Hosting, AI Automation, and NotFound
