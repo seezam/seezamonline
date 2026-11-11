@@ -393,7 +393,7 @@ seezam.pro/me/?owner=1          → визитка + QR + копирование
 | Демо-бот | @seezam_demo_bot |
 | GitHub | https://github.com/seezam/seezamonline |
 | Telegram | https://t.me/seezam |
-| Email | hello@seezam.online |
+| Email | hello@seezam.pro |
 
 ---
 

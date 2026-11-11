@@ -70,8 +70,8 @@ export function ContactSection({ locale }: ContactSectionProps) {
               <p>
                 <span className="text-primary">$</span>{" "}
                 <span className="text-muted-foreground">email:</span>{" "}
-                <a href="mailto:hello@seezam.online" className="text-foreground hover:text-primary transition-colors">
-                  hello@seezam.online
+                <a href="mailto:hello@seezam.pro" className="text-foreground hover:text-primary transition-colors">
+                  hello@seezam.pro
                 </a>
               </p>
               <p>
