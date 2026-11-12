@@ -39,8 +39,7 @@ export function Header() {
       <div className="container">
         <nav className="flex items-center justify-between h-16 md:h-20">
           <Link to={`/${location.search || ""}`} className="font-mono font-bold text-lg">
-            <span className="text-gradient">seezam</span>
-            <span className="text-muted-foreground">.online</span>
+            <span className="text-gradient">SΞΞZΔM</span>
           </Link>
 
           <div className="flex items-center gap-3">
